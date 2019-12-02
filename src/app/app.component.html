@@ -2,11 +2,11 @@
   put the toolbar 
   ① add the language translation
 -->
-toolbar here
+<app-sidenav [ngClass]="{'dark-theme': darkMode}" [title]="title">
+  <app-buttons [buttonMetaData]="darkModeButton" (click)="darkModeButton.clickEvent()"></app-buttons>
+  <router-outlet></router-outlet> 
+</app-sidenav>
 <!-- put the sidenav -->
-<router-outlet></router-outlet> 
-
-
 
 
 

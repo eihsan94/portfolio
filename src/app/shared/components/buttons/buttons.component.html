@@ -1,0 +1,7 @@
+<ng-container [ngSwitch]="buttonMetaData.type">
+    <button mat-fab *ngSwitchCase="'fab'" [color]="buttonMetaData.color">
+        <mat-icon *ngIf="buttonMetaData.icon">{{buttonMetaData.icon}}</mat-icon>
+    </button>
+    <div *ngSwitchCase="'icon'">icon</div>
+</ng-container>
+
