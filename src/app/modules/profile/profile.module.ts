@@ -12,7 +12,7 @@ import { ProfilePage } from './pages/profile.page';
     ProfilePage,
   ],
   imports: [
-    CommonModule
+    CommonModule,
   ]
 })
 export class ProfileModule { }

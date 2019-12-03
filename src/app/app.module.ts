@@ -10,6 +10,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { SharedModule } from './shared/shared.module';
+import { ProfileModule } from './modules/profile/profile.module';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { SharedModule } from './shared/shared.module';
     MatCardModule,
     MatMenuModule,
     SharedModule,
+    ProfileModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -10,7 +10,7 @@ $theme: mat-light-theme($primary, $accent, $warn);
 @include angular-material-theme($theme);
 
 
-// Our dark theme
+// ダークテーマ dark theme
 .dark-theme {
     color: $light-primary-text;
     $dark-primary: mat-palette($mat-indigo);
@@ -20,3 +20,9 @@ $theme: mat-light-theme($primary, $accent, $warn);
   
     @include angular-material-theme($dark-theme);
 }
+// タイポグラフィー　typography
+$custom-typography: mat-typography-config(
+  $font-family: 'Montserrat'
+);
+
+@include angular-material-typography($custom-typography);

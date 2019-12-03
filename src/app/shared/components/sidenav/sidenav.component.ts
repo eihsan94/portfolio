@@ -2,6 +2,8 @@ import { Component, Input } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
+import { MenuList } from './model/menu.model';
+import { TitleService } from 'src/app/core/services/title.service';
 
 @Component({
   selector: 'app-sidenav',
@@ -9,13 +11,17 @@ import { map, shareReplay } from 'rxjs/operators';
   styleUrls: ['./sidenav.component.scss']
 })
 export class SidenavComponent {
+  @Input() menuList: MenuList;
   @Input() title: string;
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
+  isHandset$: Observable< boolean > = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches),
       shareReplay()
     );
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(
+    private breakpointObserver: BreakpointObserver,
+    public titleService: TitleService,
+    ) {}
 
 }

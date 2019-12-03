@@ -7,6 +7,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { ButtonsComponent } from './components/buttons/buttons.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -27,6 +28,7 @@ import { ButtonsComponent } from './components/buttons/buttons.component';
     MatIconModule,
     MatListModule,
     MatButtonModule,
+    RouterModule,
   ]
 })
 export class SharedModule { }
