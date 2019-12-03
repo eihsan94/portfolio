@@ -14,7 +14,7 @@ export class AppComponent {
   menuList: MenuList = {
     title: `IHSAN'S CV`,
     menus: [
-      {name: 'Profile', icon: 'account_circle', path: '/profile'},
+      {name: 'Profile', icon: 'account_circle', path: ''},
       {name: 'Skills', icon: 'accessibility_new', path: '/skills'},
       {name: 'Education', icon: 'menu_book', path: '/education'},
       {name: 'Qualifications', icon: 'playlist_add_check', path: '/qualifications'},

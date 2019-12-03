@@ -5,11 +5,11 @@ import { ProfilePage } from './modules/profile/pages/profile.page';
 
 const routes: Routes = [
   { path: '', component: ProfilePage },
-  { path: 'profile', component: ProfilePage },
   { path: 'skills', component: ProfilePage },
   { path: 'education', component: ProfilePage },
   { path: 'qualifications', component: ProfilePage },
   { path: 'contact', component: ProfilePage },
+  { path: '**', redirectTo: '' },
   // { path: '/skills', component: DiaryComponent , canActivate: [AuthGuard] },
   // { path: 'login', component: LoginComponent },
   // { path: 'bear-land', component: BearLandComponent, canActivate: [AuthGuard] },
