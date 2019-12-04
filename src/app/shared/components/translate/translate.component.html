@@ -1,0 +1,10 @@
+<div class="select">
+    <mat-select (selectionChange)="switchLanguage(selectedLanguage)" [(ngModel)]="selectedLanguage">
+        <mat-option *ngFor="let lang of languages" [value]="lang.value">
+            <div class="content">
+                <img [src]="lang.flag">
+                  {{lang.name}}
+            </div>
+        </mat-option>
+    </mat-select>
+</div>

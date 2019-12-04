@@ -3,22 +3,27 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>{{menuList.title}}</mat-toolbar>
+    <mat-toolbar translate="menuTitle">{{menuList.title}}</mat-toolbar>
     <mat-nav-list *ngFor="let menu of menuList.menus">
-      <a mat-list-item [routerLink]="[menu.path]" routerLinkActive="router-link-active" ><mat-icon matSuffix>{{menu.icon}}</mat-icon>{{menu.name}}</a>
+      <a mat-list-item [routerLink]="[menu.path]" routerLinkActive="router-link-active" ><mat-icon matSuffix>{{menu.icon}}</mat-icon>　<span translate>{{menu.name}}</span></a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="primary">
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-      <span>{{titleService.currentTitle | async}}</span>
+      <div class="title-container">
+        <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()"
+          *ngIf="isHandset$ | async">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+        <span>{{titleService.currentTitle | async | translate}}</span>
+      </div>
+      <div class="setting-container">
+        <app-translate></app-translate>
+      </div>
     </mat-toolbar>
     <ng-content></ng-content>
   </mat-sidenav-content>

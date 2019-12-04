@@ -44,7 +44,6 @@ export class AppComponent {
     this.titleService.menuList = this.menuList;
     this.themeService.isDarkTheme.subscribe(darkMode => {
       this.darkMode = darkMode;
-
     });
   }
 }

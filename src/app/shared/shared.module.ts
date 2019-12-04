@@ -5,20 +5,30 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import {MatSelectModule} from '@angular/material/select';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { ButtonsComponent } from './components/buttons/buttons.component';
 import { RouterModule } from '@angular/router';
+import { TranslateComponent } from './components/translate/translate.component';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { FormsModule } from '@angular/forms';
 
-
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   declarations: [
     SidenavComponent,
     ButtonsComponent,
+    TranslateComponent,
   ],
   exports: [
     SidenavComponent,
     ButtonsComponent,
+    TranslateComponent,
   ],
   imports: [
     CommonModule,
@@ -28,7 +38,17 @@ import { RouterModule } from '@angular/router';
     MatIconModule,
     MatListModule,
     MatButtonModule,
+    MatSelectModule,
+    FormsModule,
     RouterModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+          useFactory: HttpLoaderFactory, // exported factory function needed for AoT compilation
+          deps: [HttpClient]
+      }
+    }),
   ]
 })
 export class SharedModule { }
