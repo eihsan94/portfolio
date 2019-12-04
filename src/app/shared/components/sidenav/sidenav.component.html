@@ -5,7 +5,14 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar translate="menuTitle">{{menuList.title}}</mat-toolbar>
     <mat-nav-list *ngFor="let menu of menuList.menus">
-      <a mat-list-item [routerLink]="[menu.path]" routerLinkActive="router-link-active" ><mat-icon matSuffix>{{menu.icon}}</mat-icon>　<span translate>{{menu.name}}</span></a>
+      <a mat-list-item [routerLink]="[menu.path]" routerLinkActive="router-link-active">
+        <div *ngIf="(isHandset$ | async); else webMenu" (click)="drawer.close()">
+          <mat-icon matSuffix>{{menu.icon}}</mat-icon>　<span translate>{{menu.name}}</span>
+        </div>
+        <ng-template #webMenu>
+            <mat-icon matSuffix>{{menu.icon}}</mat-icon>　<span translate>{{menu.name}}</span>
+        </ng-template>
+      </a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
