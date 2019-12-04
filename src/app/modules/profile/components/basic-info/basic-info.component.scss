@@ -1,0 +1,14 @@
+.basic-info-content-container {
+    height: 215px;
+    overflow: auto;
+    text-align: left;
+    .row {
+        margin-bottom: 7px;
+        .label {
+            font-weight: 500;
+        }
+        .data {
+            font-size: 12px;
+        }
+    }
+}

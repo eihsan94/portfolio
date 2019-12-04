@@ -4,7 +4,7 @@ export class Button {
 export class ButtonMetaData {
     type: 'fab' | 'miniFab' | 'stroked' | 'flat' | 'raised' | 'icon' | 'basic';
     icon: string;
-    color: 'primary'| 'accent' | 'warn' | 'danger';
+    color: 'basic' | 'primary'| 'accent' | 'warn' | 'danger';
     tooltip: string;
     disabled: boolean;
     matTooltipDisabled: boolean;

@@ -14,6 +14,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { FormsModule } from '@angular/forms';
+import { CarouselComponent, CarouselItemElement } from './components/carousel/carousel.component';
+import { CarouselItemDirective } from './components/carousel/carousel-item.directive';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -24,11 +26,17 @@ export function HttpLoaderFactory(http: HttpClient) {
     SidenavComponent,
     ButtonsComponent,
     TranslateComponent,
+    CarouselItemElement,
+    CarouselComponent,
+    CarouselItemDirective,
   ],
   exports: [
     SidenavComponent,
     ButtonsComponent,
     TranslateComponent,
+    CarouselItemElement,
+    CarouselComponent,
+    CarouselItemDirective,
   ],
   imports: [
     CommonModule,

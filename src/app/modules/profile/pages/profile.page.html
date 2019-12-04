@@ -1,25 +1,35 @@
+<div class="avatar-container">
+  <div class="overlay"></div>
+  <div class="image-container">
+    <img src="../../../../assets/image/profile.jpg" alt="profileImage">
+    <div class="name">
+      Engku Muhammad Ihsan
+    </div>
+    <div class="position" translate="position">
+      Fullstack Engineer / System Engineer
+    </div>
+  </div>
 
-<!-- <div class="grid-container">
-  <h1 class="mat-h1">Dashboard</h1>
+</div>
+<div class="grid-container">
   <mat-grid-list cols="2" rowHeight="350px">
     <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
-      <mat-card class="dashboard-card">
+      <mat-card class="card">
         <mat-card-header>
           <mat-card-title>
-            {{card.title}}
-            <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
-              <mat-icon>more_vert</mat-icon>
-            </button>
-            <mat-menu #menu="matMenu" xPosition="before">
-              <button mat-menu-item>Expand</button>
-              <button mat-menu-item>Remove</button>
-            </mat-menu>
+            <div translate>{{card.title}}</div>
           </mat-card-title>
         </mat-card-header>
-        <mat-card-content class="dashboard-card-content">
-          <div>Card Content Here</div>
+        <mat-card-content class="card-content" [ngSwitch]="card.content">
+          <app-hobby *ngSwitchCase="'hobbyContent'" class="hobby-content"></app-hobby>
+          <div *ngSwitchCase="'basicInfoContent'">
+            <app-basic-info></app-basic-info>
+          </div>
+          <div *ngSwitchDefault class="self-intro-content-container">
+            <div class="content" translate>{{card.content}}</div>
+          </div>
         </mat-card-content>
       </mat-card>
     </mat-grid-tile>
   </mat-grid-list>
-</div> -->
+</div>

@@ -1,0 +1,6 @@
+<div class="card-container">
+    <mat-card *ngFor="let item of items;" color="primary">
+        <img mat-card-image class="frame" [src]="item.path" alt="">
+        <div class="caption" [translate]="item.title"></div>
+    </mat-card>
+</div>

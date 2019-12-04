@@ -2,7 +2,7 @@
   margin: 20px;
 }
 
-.dashboard-card {
+.card {
   position: absolute;
   top: 15px;
   left: 15px;
@@ -16,6 +16,68 @@
   right: 10px;
 }
 
-.dashboard-card-content {
+.card-content {
   text-align: center;
+  min-height: 60%;
+  display: flex;
+  align-items: center;
+  padding: 1em 1em 1em 1em;
+  .self-intro-content-container {
+    display: flex;
+    align-items: center;
+  }
+}
+.avatar-container {
+  position: relative;
+  height: 70%;
+  width: 100%;
+  object-fit:cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../../../assets/image/profile-bg.jpg");
+  /* バックイメージの指定 */
+  background-repeat: no-repeat, repeat;
+  /* バックイメージの指定 */
+  -webkit-background-size: cover;
+  /* バックイメージの指定 */
+  -moz-background-size: cover;
+  /* バックイメージの指定 */
+  -o-background-size: cover;
+  /* バックイメージの指定 */
+  background-size: cover;
+  /* バックイメージの指定 */
+  .image-container {
+    text-align: center;
+    color: white;
+    z-index: 0;
+    img {
+      border-radius: 2em;
+      object-fit: cover;
+      height: 10em;
+      width: 10em;
+      margin-bottom: 1em;
+      box-shadow: 2px 2px 4px rgba(255,255,255, 0.3);
+    }
+    .name {
+      font-weight: 600;
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    width: 100%;
+    height: 100%;
+  }
+}
+.hobby-content {
+  width: 100%;
+}
+.content {
+  max-height: 230px;
+  overflow: auto;
 }
