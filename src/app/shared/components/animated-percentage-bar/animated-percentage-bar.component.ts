@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy, Input } from '@angular/core';
-import { Subscription, Observable, timer } from 'rxjs';
+import { Subscription, Observable, timer, interval } from 'rxjs';
 import { ProgressData } from './model/animated-percentage-bar.model';
 
 @Component({
@@ -10,17 +10,19 @@ import { ProgressData } from './model/animated-percentage-bar.model';
 export class AnimatedPercentageBarComponent implements OnInit, OnDestroy {
   @Input() progressData: ProgressData;
   subscription = new Subscription();
-  source: Observable <number> = timer(1, 10);
-  value = 0;
+  // source: Observable <number> = interval(0.1);
   constructor() {
   }
 
   ngOnInit() {
-    this.subscription.add(this.source.subscribe(t => {
-      if (t < this.progressData.percentage) {
-        this.progressData.value = t;
-      }
-    }));
+    setTimeout(() => {
+      this.progressData.value = this.progressData.percentage;
+    }, 200);
+    // this.subscription.add(this.source.subscribe(t => {
+    //   if (t <= this.progressData.percentage) {
+    //     this.progressData.value = t;
+    //   }
+    // }));
   }
   ngOnDestroy() {
     this.subscription.unsubscribe();

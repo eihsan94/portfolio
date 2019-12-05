@@ -25,5 +25,9 @@
     "cookingHobby": "料理する",
     "programmingSkillsTitle": "プログラミング力",
     "angularSkillsTitle": "アングラー力",
-    "languageSkillsTitle": "言語力"
+    "languageSkillsTitle": "言語力",
+    "Japanese": "日本語",
+    "English": "英語",
+    "Malay": "マレー語"
+    
 }

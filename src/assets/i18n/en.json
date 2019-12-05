@@ -25,5 +25,8 @@
     "cookingHobby": "Cooking",
     "programmingSkillsTitle": "Programming Skills",
     "angularSkillsTitle": "Angular Skills",
-    "languageSkillsTitle": "Language Skills"
+    "languageSkillsTitle": "Language Skills",
+    "Japanese": "Japanese",
+    "English": "English",
+    "Malay": "Malay"
 }
