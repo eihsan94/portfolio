@@ -16,6 +16,10 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { FormsModule } from '@angular/forms';
 import { CarouselComponent, CarouselItemElement } from './components/carousel/carousel.component';
 import { CarouselItemDirective } from './components/carousel/carousel-item.directive';
+import { GridListComponent } from './components/grid-list/grid-list.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { CardItemDirective } from './components/grid-list/directive/card-item.directive';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -29,6 +33,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     CarouselItemElement,
     CarouselComponent,
     CarouselItemDirective,
+    GridListComponent,
+    CardItemDirective,
   ],
   exports: [
     SidenavComponent,
@@ -37,6 +43,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     CarouselItemElement,
     CarouselComponent,
     CarouselItemDirective,
+    GridListComponent,
+    CardItemDirective,
   ],
   imports: [
     CommonModule,
@@ -47,6 +55,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     MatListModule,
     MatButtonModule,
     MatSelectModule,
+    MatCardModule,
+    MatGridListModule,
     FormsModule,
     RouterModule,
     HttpClientModule,

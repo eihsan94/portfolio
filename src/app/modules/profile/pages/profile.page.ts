@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { map } from 'rxjs/operators';
-import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
+import { CardGridSetting } from 'src/app/shared/components/grid-list/model/grid-list.model';
 
 @Component({
   selector: 'app-profile',
@@ -9,33 +8,26 @@ import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 })
 export class ProfilePage {
   /** Based on the screen size, switch from standard to one column per row */
-  cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
-    map(({ matches }) => {
-      if (matches) {
-        return [
-          {
-            title: 'selfIntroTitle',
-            content: 'selfIntroContent',
-            cols: 2,
-            rows: 1,
-          },
-          { title: 'basicInfoTitle', content: 'basicInfoContent', cols: 2, rows: 1 },
-          { title: 'hobbyTitle', content: 'hobbyContent', cols: 2, rows: 1 },
-        ];
-      }
+  mobileViewCards: CardGridSetting[] = [
+    {
+      title: 'selfIntroTitle',
+      content: 'selfIntroContent',
+      cols: 2,
+      rows: 1,
+    },
+    { title: 'basicInfoTitle', content: 'basicInfoContent', cols: 2, rows: 1 },
+    { title: 'hobbyTitle', content: 'hobbyContent', cols: 2, rows: 1 },
+  ];
+  webViewCards: CardGridSetting[] = [
+    {
+      title: 'selfIntroTitle',
+      content: 'selfIntroContent',
+      cols: 2,
+      rows: 1,
+    },
+    { title: 'basicInfoTitle', content: 'basicInfoContent', cols: 1, rows: 1 },
+    { title: 'hobbyTitle', content: 'hobbyContent', cols: 1, rows: 1 },
+  ];
 
-      return [
-        {
-          title: 'selfIntroTitle',
-          content: 'selfIntroContent',
-          cols: 2,
-          rows: 1,
-        },
-        { title: 'basicInfoTitle', content: 'basicInfoContent', cols: 1, rows: 1 },
-        { title: 'hobbyTitle', content: 'hobbyContent', cols: 1, rows: 1 },
-      ];
-    })
-  );
-
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor() {}
 }

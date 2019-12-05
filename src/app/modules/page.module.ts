@@ -4,8 +4,6 @@ import { MatCardModule } from '@angular/material/card';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { MatGridListModule } from '@angular/material/grid-list';
-import { MatMenuModule } from '@angular/material/menu';
 import { ProfilePage } from './profile/pages/profile.page';
 import { HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
@@ -29,7 +27,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     SharedModule,
     MatButtonModule,
     MatIconModule,
-    MatGridListModule,
     TranslateModule.forRoot({
         loader: {
           provide: TranslateLoader,
