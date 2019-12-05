@@ -31,7 +31,6 @@ export class GridListComponent implements OnInit {
   constructor(private breakpointObserver: BreakpointObserver) {}
 
   ngOnInit() {
-    console.log(this.cards);
   }
 
 }

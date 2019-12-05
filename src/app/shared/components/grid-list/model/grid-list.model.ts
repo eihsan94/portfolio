@@ -3,4 +3,5 @@ export class CardGridSetting {
     content: string;
     cols: number;
     rows: number;
+    otherData?: any[];
 }

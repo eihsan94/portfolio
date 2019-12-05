@@ -10,6 +10,9 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { BasicInfoComponent } from './profile/components/basic-info/basic-info.component';
 import { HobbyComponent } from './profile/components/hobby/hobby.component';
+import { SkillsPage } from './skills/skills.page';
+import { EducationPage } from './education/education.page';
+import { QualificationsPage } from './qualifications/qualifications.page';
 
 export function HttpLoaderFactory(http: HttpClient) {
     return new TranslateHttpLoader(http);
@@ -20,6 +23,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     ProfilePage,
     BasicInfoComponent,
     HobbyComponent,
+    SkillsPage,
+    EducationPage,
+    QualificationsPage,
   ],
   imports: [
     CommonModule,

@@ -22,5 +22,8 @@
     "longboardHobby": "Longboard",
     "readingHobby": "Reading",
     "programmingHobby": "Programming",
-    "cookingHobby": "Cooking"
+    "cookingHobby": "Cooking",
+    "programmingSkillsTitle": "Programming Skills",
+    "angularSkillsTitle": "Angular Skills",
+    "languageSkillsTitle": "Language Skills"
 }

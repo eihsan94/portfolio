@@ -1,0 +1,22 @@
+<app-grid-list 
+[mobileViewCards]="mobileViewCards"
+[webViewCards]="webViewCards"
+>
+<mat-card-content *cardItem="let card">
+    <ng-container *ngFor="let p of card.otherData">
+        <app-animated-percentage-bar [progressData]="p"></app-animated-percentage-bar>
+    </ng-container>
+</mat-card-content>
+<!-- *cardItem="let card" === <ng-template cardItem let-item> -->
+  <!-- <mat-card-content *cardItem="let card" class="card-content" [ngSwitch]="card.content">
+    <div *ngSwitchCase="'programmingSkillsContent'" class="programing-skills-content">
+        stat for programming skills
+    </div>
+    <div *ngSwitchCase="'basicInfoContent'">
+      <app-basic-info></app-basic-info>
+    </div>
+    <div *ngSwitchDefault class="self-intro-content-container">
+      <div class="content" translate>{{card.content}}</div>
+    </div>
+  </mat-card-content> -->
+</app-grid-list>

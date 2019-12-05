@@ -1,18 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ProfilePage } from './modules/profile/pages/profile.page';
+import { SkillsPage } from './modules/skills/skills.page';
+import { EducationPage } from './modules/education/education.page';
+import { QualificationsPage } from './modules/qualifications/qualifications.page';
 
 
 const routes: Routes = [
   { path: '', component: ProfilePage },
-  { path: 'skills', component: ProfilePage },
-  { path: 'education', component: ProfilePage },
-  { path: 'qualifications', component: ProfilePage },
-  { path: 'contact', component: ProfilePage },
+  { path: 'skills', component: SkillsPage },
+  { path: 'education', component: EducationPage },
+  { path: 'qualifications', component: QualificationsPage },
   { path: '**', redirectTo: '' },
-  // { path: '/skills', component: DiaryComponent , canActivate: [AuthGuard] },
-  // { path: 'login', component: LoginComponent },
-  // { path: 'bear-land', component: BearLandComponent, canActivate: [AuthGuard] },
 ];
 
 @NgModule({

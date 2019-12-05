@@ -11,29 +11,6 @@
   </div>
 
 </div>
-<!-- <div class="grid-container">
-  <mat-grid-list cols="2" rowHeight="350px">
-    <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
-      <mat-card class="card">
-        <mat-card-header>
-          <mat-card-title>
-            <div translate>{{card.title}}</div>
-          </mat-card-title>
-        </mat-card-header>
-        <mat-card-content class="card-content" [ngSwitch]="card.content">
-          <app-hobby *ngSwitchCase="'hobbyContent'" class="hobby-content"></app-hobby>
-          <div *ngSwitchCase="'basicInfoContent'">
-            <app-basic-info></app-basic-info>
-          </div>
-          <div *ngSwitchDefault class="self-intro-content-container">
-            <div class="content" translate>{{card.content}}</div>
-          </div>
-        </mat-card-content>
-      </mat-card>
-    </mat-grid-tile>
-  </mat-grid-list>
-</div> -->
-
 <app-grid-list 
 [mobileViewCards]="mobileViewCards"
 [webViewCards]="webViewCards"

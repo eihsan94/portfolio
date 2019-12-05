@@ -22,5 +22,8 @@
     "longboardHobby": "ロングボード",
     "readingHobby": "読書",
     "programmingHobby": "プログラミング",
-    "cookingHobby": "料理する"
+    "cookingHobby": "料理する",
+    "programmingSkillsTitle": "プログラミング力",
+    "angularSkillsTitle": "アングラー力",
+    "languageSkillsTitle": "言語力"
 }

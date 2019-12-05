@@ -20,7 +20,8 @@ import { GridListComponent } from './components/grid-list/grid-list.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { CardItemDirective } from './components/grid-list/directive/card-item.directive';
-
+import { AnimatedPercentageBarComponent } from './components/animated-percentage-bar/animated-percentage-bar.component';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
@@ -35,6 +36,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     CarouselItemDirective,
     GridListComponent,
     CardItemDirective,
+    AnimatedPercentageBarComponent,
   ],
   exports: [
     SidenavComponent,
@@ -45,6 +47,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     CarouselItemDirective,
     GridListComponent,
     CardItemDirective,
+    AnimatedPercentageBarComponent,
   ],
   imports: [
     CommonModule,
@@ -60,6 +63,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     FormsModule,
     RouterModule,
     HttpClientModule,
+    MatProgressBarModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
