@@ -39,6 +39,8 @@ export class SkillsPage {
         {percentage: 70, value: 0, name: 'Guard'},
         {percentage: 75, value: 0, name: 'RxJs'},
         {percentage: 20, value: 0, name: 'NgRx'},
+        {percentage: 75, value: 0, name: 'Angular Material'},
+        {percentage: 50, value: 0, name: 'Karma Jasmine'},
       ],
       cols: 2,
       rows: 1,
@@ -102,6 +104,6 @@ export class SkillsPage {
       ],
     },
   ];
-  
+
   constructor() {}
 }

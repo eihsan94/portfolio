@@ -1,0 +1,56 @@
+@function calc-height($value1) {
+    @return $value1 / 3;
+}
+@function calc-card-height($value1) {
+    @return $value1 / 1.7;
+}
+$image-width: 100%;
+$image-height: calc-height($image-width);
+$card-width: 20em;
+$card-height: calc-card-height($card-width);
+
+.card-container {
+    width: 100%;
+    height: 90%;
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    mat-card {
+        background: white;
+        color: black;
+        width: $card-width;
+        height: $card-height;
+        margin: 2em;
+        mat-card-title {
+            width: 100%;
+            display: flex;
+            font-size: 1.3em;
+            .name, .date {
+                width: 50%;
+            }
+            .date {
+                text-align: right;
+            }
+        }
+        mat-card-subtitle {
+            color: #757575;
+        }
+        .test-dome {
+            display: flex;
+            align-items: center;
+            a {
+                margin-right: 1em;
+            }
+        }
+        img {
+            margin-left: -1em;
+            width: $image-width;
+            height: $image-height;
+        }
+        .imageTall {
+            height: 7em;
+        }
+    }
+}

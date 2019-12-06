@@ -6,7 +6,7 @@
     "Education": "Education",
     "Qualifications": "Qualifications",
     "Contact": "Contact",
-    "position": "Fullstack Engineer / System Engineer",
+    "position": "Fullstack Web Developer / System Engineer",
     "selfIntroTitle": "Self Intro",
     "selfIntroContent": "Hi I am Engku Muhammad Ihsan. Currently I am fullstack web developer / System Engineer and also have expertise with Angular8, Rails, Express and front end. Done few company projects. Won the best thesis graduation award in Tottori University. Got straight A's in Malaysia's elementary, primary, secondary central examination. Got 935 point in Toeic. Lover of innovation and everything related to generate new knowledge. Face problems with a smile and solve them as soon as possible. Very calculated about the time I spend and work I do.",
     "basicInfoTitle": "Basic Information",
@@ -15,7 +15,7 @@
     "emailLabel": "EMAIL",
     "phoneLabel": "PHONE",
     "addressLabel": "ADDRESS",
-    "addressData": "5-chōme-207 Koyamachōminami Tottori, 680-0945",
+    "addressData": "5-chōme-207 Koyamachōminami Tottori, Japan 680-0945",
     "languageLabel": "LANGUAGE",
     "languageData": "Japanese, English, Malay",
     "hobbyTitle": "My Hobby",
@@ -28,5 +28,13 @@
     "languageSkillsTitle": "Language Skills",
     "Japanese": "Japanese",
     "English": "English",
-    "Malay": "Malay"
+    "Malay": "Malay",
+    "qualificationsTitle": "My Qualifications",
+    "ToeicYear": "April, 2017",
+    "JLPTYear": "April, 2017",
+    "ITPassportYear": "April, 2018",
+    "TestDomeYear": "April, 2019",
+    "935Point": "935",
+    "Pass": "Pass",
+    "showTestDomeDetails": "Details"
 }

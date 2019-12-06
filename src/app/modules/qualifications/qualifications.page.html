@@ -1,1 +1,27 @@
-<p>qualifications works!</p>
+<div class="card-container">
+    <mat-card *ngFor="let data of qualifications.contents">
+        <mat-card-title>
+            <div class="name" [translate]="data.certificate"></div>
+            <div class="date" [translate]="data.date"></div>
+        </mat-card-title>
+        <mat-card-subtitle [translate]="data.result"></mat-card-subtitle>
+        <ng-container [ngSwitch]="data.certificate">
+            <ng-container *ngSwitchCase="'TestDome'">
+                <div class="test-dome">
+                    <a href="https://www.testdome.com/cert/21a0eac0fdd543b88045c12f3a4ec47c" class="testdome-certificate-stamp silver">
+                        <span class="testdome-certificate-name">ENGKU MUHAMMAD IHSAN</span>
+                        <span class="testdome-certificate-test-name">Angular and TypeScript </span>
+                        <span class="testdome-certificate-card-logo">
+                            TestDome<br />
+                            Certificate
+                        </span>
+                    </a>
+                    <!-- <a href="https://www.testdome.com/cert/21a0eac0fdd543b88045c12f3a4ec47c" translate="showTestDomeDetails"></a> -->
+                </div>
+            </ng-container>
+            <ng-container *ngSwitchDefault>
+                <img [src]="data.path" alt="data.path" [ngClass]="{imageTall: data.certificate === 'JLPT-N1'}">
+            </ng-container>
+        </ng-container>
+    </mat-card>
+</div>

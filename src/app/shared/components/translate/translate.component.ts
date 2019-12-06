@@ -8,7 +8,7 @@ import { Language } from './model/language.model';
   styleUrls: ['./translate.component.scss']
 })
 export class TranslateComponent implements OnInit {
-  selectedLanguage = 'en';
+  selectedLanguage = 'ja';
   languages: Language[] = [
     {name: 'English', value: 'en', flag: '../../../../assets/icon/en.png'},
     {name: '日本語', value: 'ja', flag: '../../../../assets/icon/ja.png'},

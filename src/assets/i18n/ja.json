@@ -28,6 +28,14 @@
     "languageSkillsTitle": "言語力",
     "Japanese": "日本語",
     "English": "英語",
-    "Malay": "マレー語"
+    "Malay": "マレー語",
+    "qualificationsTitle": "取得した資格",
+    "ToeicYear": "2017年4月",
+    "JLPTYear": "2017年4月",
+    "ITPassportYear": "2018年4月",
+    "TestDomeYear": "2019年4月",
+    "935Point": "935点",
+    "Pass": "合格",
+    "showTestDomeDetails": "詳細"
     
 }
