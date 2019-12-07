@@ -9,7 +9,10 @@
         <div class="description">
             <div class="school" [translate]="card.school"></div>
             <div class="content-list">
-                <div class="content" *ngFor="let c of card.contents" [translate]="c"></div>
+                  <div class="content" *ngFor="let c of card.contents">
+                    ●
+                    　<span [translate]="c"></span>
+                     </div>
             </div>
         </div>
     </mat-card>

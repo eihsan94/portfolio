@@ -15,6 +15,7 @@ export class AppComponent {
     title: `IHSAN'S CV`,
     menus: [
       {name: 'Profile', icon: 'account_circle', path: ''},
+      {name: 'WorkExperience', icon: 'work_outline', path: '/work_experience'},
       {name: 'Skills', icon: 'accessibility_new', path: '/skills'},
       {name: 'Qualifications', icon: 'playlist_add_check', path: '/qualifications'},
       {name: 'Education', icon: 'menu_book', path: '/education'},

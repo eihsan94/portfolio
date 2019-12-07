@@ -1,8 +1,8 @@
 mat-card {
-    margin:  1em 2em 1em 2em;
+    margin:  2em 2em 2em 2em;
     height: 10em;
     display: flex;
-    font-size: 10px;
+    // font-size: 10px;
     padding: 0em 0.5em 0em 0em;
     .scholar {
         font-weight: 600;
@@ -23,7 +23,7 @@ mat-card {
 
     .description {
         width: 70%;
-        padding: 1em 0em 1em 0em;
+        padding: 1em 0em 0em 0em;
         overflow: auto;
         
         .school, .content-list {
@@ -31,12 +31,16 @@ mat-card {
         }
         .school {
             padding: 0em 0.5em 0em 0em;
+            font-weight: 600;
+            font-size: 1.2em;
         }
         .content-list {
-            padding: 1em 0.5em 0em 0em;
-            .content {
-                margin-left: 1em;
-            }
+            padding: 0em 0.5em 0em 0em;
+            height: 70%;
+            overflow: auto;
+            // .content {
+            //     margin-left: 1em;
+            // }
         }
     }
 }

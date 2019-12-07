@@ -12,7 +12,7 @@ export class EducationPage implements OnInit {
       scholar: 'bachelorDegree',
       school: 'bachelorSchool',
       contents: [
-        'bachelorDegreeContent1', 'bachelorDegreeContent2', 'bachelorDegreeContent3'
+        'bachelorDegreeContent1', 'bachelorDegreeContent2'
       ]
     },
     {

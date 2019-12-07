@@ -1,4 +1,5 @@
 @import '~@angular/material/theming';
+@import './timeline.theme.scss';
 
 @include mat-core();
 
@@ -7,8 +8,15 @@ $accent: mat-palette($mat-pink, A200, A100, A400);
 $warn: mat-palette($mat-red);
 $theme: mat-light-theme($primary, $accent, $warn);
 
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue.
+$mgl-app-primary: mat-palette($primary);
+$mgl-app-accent:  mat-palette($accent);
+$mgl-app-warn: mat-palette($warn); // The warn palette is optional (defaults to red).
+$mgl-app-theme: mat-light-theme($mgl-app-primary, $mgl-app-accent, $mgl-app-warn);
 @include angular-material-theme($theme);
-
+@include mgl-timeline-theme($mgl-app-theme);
 
 // ダークテーマ dark theme
 .dark-theme {
@@ -17,8 +25,13 @@ $theme: mat-light-theme($primary, $accent, $warn);
     $dark-accent: mat-palette($mat-gray, A400, A100, A700);
     $dark-warn: mat-palette($mat-red);
     $dark-theme: mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
-  
+    // timeline pallete
+    $mgl-dark-primary: mat-palette($dark-primary);
+    $mgl-dark-accent:  mat-palette($dark-accent);
+    $mgl-dark-warn: mat-palette($dark-warn); 
+    $mgl-dark-theme: mat-dark-theme($mgl-dark-primary, $mgl-dark-accent, $mgl-dark-warn);
     @include angular-material-theme($dark-theme);
+    @include mgl-timeline-theme($mgl-dark-theme);
 }
 // タイポグラフィー　typography
 $custom-typography: mat-typography-config(

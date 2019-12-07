@@ -13,6 +13,8 @@ import { HobbyComponent } from './profile/components/hobby/hobby.component';
 import { SkillsPage } from './skills/skills.page';
 import { EducationPage } from './education/education.page';
 import { QualificationsPage } from './qualifications/qualifications.page';
+import { WorkExperiencePage } from './work-experience/work-experience.page';
+import { MglTimelineModule } from '../shared/components/timeline/timeline.module';
 
 export function HttpLoaderFactory(http: HttpClient) {
     return new TranslateHttpLoader(http);
@@ -26,11 +28,13 @@ export function HttpLoaderFactory(http: HttpClient) {
     SkillsPage,
     EducationPage,
     QualificationsPage,
+    WorkExperiencePage,
   ],
   imports: [
     CommonModule,
     MatCardModule,
     SharedModule,
+    MglTimelineModule,
     MatButtonModule,
     MatIconModule,
     TranslateModule.forRoot({

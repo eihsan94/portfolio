@@ -1,0 +1,20 @@
+mgl-timeline {
+    margin-top: 1em;
+    padding: 1em;
+    mgl-timeline-entry-side {
+        top: 20px;
+    }
+    mgl-timeline-entry-content {
+        font-size: 15px;
+        .main {
+            font-weight: 700;
+        }
+        .row {
+            display: flex;
+            padding-top: 10px;
+            .content {
+                margin-left: 1em;
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+<mgl-timeline [toggle]="toggle" [alternate]="true" [focusOnOpen]="false" [side]="side" [mobileWidthThreshold]="mobileWidthThreshold">
+  <mgl-timeline-entry *ngFor="let entry of entries; let i = index" (expand)="onExpand($event, i)">
+    <mgl-timeline-entry-header>
+      <div [translate]="entry.header"></div>
+    </mgl-timeline-entry-header>
+    <mgl-timeline-entry-content>
+      <div class="main" [translate]="entry.content.main"></div>
+      <div class="row" *ngFor="let content of entry.content.sub">
+        ●
+        <div class="content" [translate]="content"></div>
+      </div>
+
+    </mgl-timeline-entry-content>
+    <mgl-timeline-entry-dot [class]="color ? 'primary' : 'accent'" [size]="size"></mgl-timeline-entry-dot>
+    <mgl-timeline-entry-side [translate]="entry.year"></mgl-timeline-entry-side>
+  </mgl-timeline-entry>
+</mgl-timeline>
