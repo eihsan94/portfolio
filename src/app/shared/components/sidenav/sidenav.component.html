@@ -1,29 +1,22 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport
-      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-      [mode]="(isHandset$ | async) ? 'over' : 'side'"
-      [opened]="(isHandset$ | async) === false">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
     <mat-toolbar translate="menuTitle">{{menuList.title}}</mat-toolbar>
     <mat-nav-list *ngFor="let menu of menuList.menus">
-      <a mat-list-item [routerLink]="[menu.path]" routerLinkActive="router-link-active">
-        <div *ngIf="(isHandset$ | async); else webMenu" (click)="drawer.close()">
-          <mat-icon matSuffix>{{menu.icon}}</mat-icon>　<span translate>{{menu.name}}</span>
-        </div>
-        <ng-template #webMenu>
-            <mat-icon matSuffix>{{menu.icon}}</mat-icon>　<span translate>{{menu.name}}</span>
-        </ng-template>
+      <a mat-list-item [routerLink]="[menu.path]" routerLinkActive="router-link-active" (click)="drawer.close()" *ngIf="(isHandset$ | async); else webMenu">
+        <mat-icon matSuffix>{{menu.icon}}</mat-icon>　<span translate>{{menu.name}}</span>
       </a>
+      <ng-template #webMenu>
+        <a mat-list-item [routerLink]="[menu.path]" routerLinkActive="router-link-active">
+          <mat-icon matSuffix>{{menu.icon}}</mat-icon>　<span translate>{{menu.name}}</span>
+        </a>
+      </ng-template>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="primary">
       <div class="title-container">
-        <button
-          type="button"
-          aria-label="Toggle sidenav"
-          mat-icon-button
-          (click)="drawer.toggle()"
-          *ngIf="isHandset$ | async">
+        <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" *ngIf="isHandset$ | async">
           <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
         </button>
         <span>{{titleService.currentTitle | async | translate}}</span>

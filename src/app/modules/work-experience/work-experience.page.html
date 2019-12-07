@@ -1,5 +1,5 @@
 <mgl-timeline [toggle]="toggle" [alternate]="true" [focusOnOpen]="false" [side]="side" [mobileWidthThreshold]="mobileWidthThreshold">
-  <mgl-timeline-entry *ngFor="let entry of entries; let i = index" (expand)="onExpand($event, i)">
+  <mgl-timeline-entry *ngFor="let entry of entries; let i = index">
     <mgl-timeline-entry-header>
       <div [translate]="entry.header"></div>
     </mgl-timeline-entry-header>

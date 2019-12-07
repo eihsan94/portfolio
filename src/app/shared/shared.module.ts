@@ -14,8 +14,6 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { FormsModule } from '@angular/forms';
-import { CarouselComponent, CarouselItemElement } from './components/carousel/carousel.component';
-import { CarouselItemDirective } from './components/carousel/carousel-item.directive';
 import { GridListComponent } from './components/grid-list/grid-list.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -31,9 +29,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     SidenavComponent,
     ButtonsComponent,
     TranslateComponent,
-    CarouselItemElement,
-    CarouselComponent,
-    CarouselItemDirective,
     GridListComponent,
     CardItemDirective,
     AnimatedPercentageBarComponent,
@@ -42,9 +37,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     SidenavComponent,
     ButtonsComponent,
     TranslateComponent,
-    CarouselItemElement,
-    CarouselComponent,
-    CarouselItemDirective,
     GridListComponent,
     CardItemDirective,
     AnimatedPercentageBarComponent,

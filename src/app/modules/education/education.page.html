@@ -1,19 +1,41 @@
 <div class="card-container">
-    <mat-card *ngFor="let card of educations">
-        <div class="scholar">
-            <div class="content">
-                <div class="duration" [translate]="card.duration"></div>
-                <div class="name" [translate]="card.scholar"></div>
+    <ng-container *ngIf="!(isHandset$ | async); else mobileView">
+        <mat-card class="webView" *ngFor="let card of educations">
+            <div class="scholar">
+                <div class="content">
+                    <div class="duration" [translate]="card.duration"></div>
+                    <div class="name" [translate]="card.scholar"></div>
+                </div>
             </div>
-        </div>
-        <div class="description">
-            <div class="school" [translate]="card.school"></div>
-            <div class="content-list">
-                  <div class="content" *ngFor="let c of card.contents">
-                    ●
-                    　<span [translate]="c"></span>
-                     </div>
+            <div class="description">
+                <div class="school" [translate]="card.school"></div>
+                <div class="content-list">
+                      <div class="content" *ngFor="let c of card.contents">
+                        ●
+                        　<span [translate]="c"></span>
+                         </div>
+                </div>
             </div>
-        </div>
-    </mat-card>
-</div>
+        </mat-card>
+    </ng-container>
+    <!-- mobile layout -->
+    <ng-template #mobileView>
+        <mat-card  class="mobileView" *ngFor="let card of educations">
+            <div class="mobile-scholar">
+                <div class="mobile-content">
+                    <div class="duration" [translate]="card.duration"></div>
+                    <div class="name" [translate]="card.scholar"></div>
+                </div>
+            </div>
+            <div class="mobile-description">
+                <div class="school" [translate]="card.school"></div>
+                <div class="content-list">
+                      <div class="content" *ngFor="let c of card.contents">
+                        ●
+                        　<span [translate]="c"></span>
+                         </div>
+                </div>
+            </div>
+        </mat-card>
+    </ng-template>
+</div>    

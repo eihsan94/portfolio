@@ -8,11 +8,11 @@ import { WorkExperiencePage } from './modules/work-experience/work-experience.pa
 
 
 const routes: Routes = [
-  { path: '', component: ProfilePage },
-  { path: 'work_experience', component: WorkExperiencePage },
-  { path: 'skills', component: SkillsPage },
-  { path: 'education', component: EducationPage },
-  { path: 'qualifications', component: QualificationsPage },
+  { path: '', component: ProfilePage, data: { state: '' } },
+  { path: 'work_experience', component: WorkExperiencePage, data: { state: 'work_experience' } },
+  { path: 'skills', component: SkillsPage, data: { state: 'skills' } },
+  { path: 'education', component: EducationPage, data: { state: 'education' } },
+  { path: 'qualifications', component: QualificationsPage, data: { state: 'qualifications' } },
   { path: '**', redirectTo: '' },
 ];
 

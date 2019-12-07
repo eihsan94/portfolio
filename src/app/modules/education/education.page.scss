@@ -1,8 +1,11 @@
 mat-card {
-    margin:  2em 2em 2em 2em;
-    height: 10em;
+    margin: 2em 2em 2em 2em;
+
+}
+
+.webView {
     display: flex;
-    // font-size: 10px;
+    height: 10em;
     padding: 0em 0.5em 0em 0em;
     .scholar {
         font-weight: 600;
@@ -15,7 +18,8 @@ mat-card {
         min-width: 13em;
         margin-right: 1em;
 
-        .duration, .name {
+        .duration,
+        .name {
             width: 100%;
             text-align: center;
         }
@@ -25,22 +29,68 @@ mat-card {
         width: 70%;
         padding: 1em 0em 0em 0em;
         overflow: auto;
-        
-        .school, .content-list {
+
+        .school,
+        .content-list {
             overflow-wrap: break-word;
         }
+
         .school {
             padding: 0em 0.5em 0em 0em;
             font-weight: 600;
             font-size: 1.2em;
         }
+
         .content-list {
             padding: 0em 0.5em 0em 0em;
             height: 70%;
             overflow: auto;
-            // .content {
-            //     margin-left: 1em;
-            // }
+        }
+    }
+}
+
+// mobile
+.mobileView {
+    height: 15em;
+    padding: 0em;
+    .mobile-scholar {
+        font-weight: 600;
+        background: #00334D;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1em;
+    
+        .duration,
+        .name {
+            width: 100%;
+            text-align: center;
+        }
+    }
+    
+    .mobile-description {
+        width: 100%;
+        overflow: auto;
+        text-align: center;
+    
+        .school,
+        .content-list {
+            overflow-wrap: break-word;
+        }
+    
+        .school {
+            padding: 0em 0.5em 0em 0em;
+            font-weight: 600;
+            font-size: 1em;
+        }
+    
+        .content-list {
+            // margin-top: -15px;
+            padding: 0em 1em;
+            font-size: 13px;
+            height: 7em;
+            overflow: auto;
         }
     }
 }
