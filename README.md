@@ -1,8 +1,29 @@
 # Portfolio
 
+## 目次　(Table of Contents)
+- [Portfolio](#portfolio)
+  - [目次　(Table of Contents)](#%e7%9b%ae%e6%ac%a1-table-of-contents)
+  - [What is this?](#what-is-this)
+  - [Live Demo](#live-demo)
+  - [Project Structure](#project-structure)
+  - [Features](#features)
+  - [Requirements?](#requirements)
+  - [Installation](#installation)
+  - [Run Application and start development Server](#run-application-and-start-development-server)
+  - [Run Tests](#run-tests)
+  - [Build Application for Deployment](#build-application-for-deployment)
 
-# ソースの構成　（Project Structure）
+---
 
+## What is this?
+Angular 8 で作られた自分についての自己紹介のウェブアプリです。 (This small Angular8 application is a self intro web app of me.)
+
+## Live Demo
+
+Live Demoは[こちらから](https://master.d3phb5yfhxhh0o.amplifyapp.com/)
+
+## Project Structure
+ソースの構成は以下となります：
 <pre>
 dist/                        コンパイルされた静的ファイル　compiled static file
 docs/                        プロジェクト説明とコーディング方法ベストプラクティスなど project docs, coding guides and best practice（開発中）
@@ -26,3 +47,40 @@ src/                         プロジェクトのソースコード　project s
 +- test.ts                   単体テストエントリーポイント unit tests entry point
 proxy.conf.js                corsの設定ファイル（今回のプロジェクトは不使用） backend cors configuration(not used in this project)
 </pre>
+
+## Features
+使用しているライブラリ
+- Angular 8.2.14
+- Angular Material 8.2.3
+
+## Requirements?
+- Node v10.16.3 ~
+
+## Installation
+パッケージインストール
+```SH
+$ npm install
+```
+
+## Run Application and start development Server
+アプリ実行コマンド
+```SH
+$ npm start
+```
+起動したら``http://localhost:4200/``をブラウザーで開く
+
+## Run Tests
+ - ツール
+   -  [jasmin](https://jasmine.github.io)
+   -   [karma](https://karma-runner.github.io) 設定ファイル `karma.conf.js`.
+- テストの実行コマンド：
+```SH
+$ npm test
+```
+## Build Application for Deployment
+ デプロイビルド実行コマンド：
+```SH
+$ npm run build
+```
+デプロイビルド完了したら`dist/portfolio/`にコンパイルされたJS、CSSとHTMlファイルが格納される
+
