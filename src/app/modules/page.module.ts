@@ -15,6 +15,8 @@ import { EducationPage } from './education/education.page';
 import { QualificationsPage } from './qualifications/qualifications.page';
 import { WorkExperiencePage } from './work-experience/work-experience.page';
 import { MglTimelineModule } from '../shared/components/timeline/timeline.module';
+import { ProjectsPage } from './projects/projects.page';
+import { MatRippleModule } from '@angular/material/core';
 
 export function HttpLoaderFactory(http: HttpClient) {
     return new TranslateHttpLoader(http);
@@ -29,6 +31,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     EducationPage,
     QualificationsPage,
     WorkExperiencePage,
+    ProjectsPage,
   ],
   imports: [
     CommonModule,
@@ -37,6 +40,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     MglTimelineModule,
     MatButtonModule,
     MatIconModule,
+    MatRippleModule,
     TranslateModule.forRoot({
         loader: {
           provide: TranslateLoader,

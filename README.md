@@ -3,6 +3,7 @@
 
 # ソースの構成　（Project Structure）
 
+<pre>
 dist/                        コンパイルされた静的ファイル　compiled static file
 docs/                        プロジェクト説明とコーディング方法ベストプラクティスなど project docs, coding guides and best practice（開発中）
 e2e/                         結合テスト end-to-end tests（開発中）
@@ -24,3 +25,4 @@ src/                         プロジェクトのソースコード　project s
 |- polyfills.ts              ブラウザ対応 Browser compatibility
 +- test.ts                   単体テストエントリーポイント unit tests entry point
 proxy.conf.js                corsの設定ファイル（今回のプロジェクトは不使用） backend cors configuration(not used in this project)
+</pre>

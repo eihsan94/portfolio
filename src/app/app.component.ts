@@ -17,6 +17,7 @@ export class AppComponent {
       {name: 'Profile', icon: 'account_circle', path: ''},
       {name: 'WorkExperience', icon: 'work_outline', path: '/work_experience'},
       {name: 'Skills', icon: 'accessibility_new', path: '/skills'},
+      {name: 'Projects', icon: 'web', path: '/projects'},
       {name: 'Qualifications', icon: 'playlist_add_check', path: '/qualifications'},
       {name: 'Education', icon: 'menu_book', path: '/education'},
     ],

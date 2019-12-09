@@ -13,6 +13,8 @@ export class QualificationsPage {
       contents: [
         {date: 'ToeicYear', certificate: 'Toeic', result: '935Point', path: '../../../assets/image/toeic.jpg'},
         {date: 'JLPTYear', certificate: 'JLPT-N1', result: 'Pass', path: '../../../assets/image/JLPT.jpg'},
+        {date: 'EikenYear', certificate: 'EikenCertificate', result: 'Pass', path: '../../../assets/image/eiken.png'},
+        {date: 'DeleYear', certificate: 'DeleCertificate', result: 'Pass', path: '../../../assets/image/dele.png'},
         {date: 'ITPassportYear', certificate: 'IT Passport', result: 'Pass', path: '../../../assets/image/ITPassport.png'},
         {date: 'TestDomeYear', certificate: 'TestDome', result: 'Pass', path: ''},
       ]
