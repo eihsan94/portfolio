@@ -1,10 +1,15 @@
-<div class="select">
-    <mat-select (selectionChange)="switchLanguage(selectedLanguage)" [(ngModel)]="selectedLanguage">
-        <mat-option *ngFor="let lang of languages" [value]="lang.value">
-            <div class="content">
-                <img [src]="lang.flag">
-                  {{lang.name}}
-            </div>
-        </mat-option>
-    </mat-select>
-</div>
+<button mat-stroked-button class="main-translation-btn" [matMenuTriggerFor]="menu" aria-label="menu-translation-button">
+    <div class="btn-content">
+        <img [src]="selectedLanguage.flag">
+        {{selectedLanguage.name}}
+        <mat-icon>expand_more</mat-icon>
+    </div>
+  </button>
+  <mat-menu #menu="matMenu">
+      <button mat-menu-item *ngFor="let lang of languages" (click)="switchLanguage(lang)" aria-label="menu-translation-item-button">
+          <div class="btn-content">
+              <img [src]="lang.flag">
+              {{lang.name}}
+          </div>
+      </button>
+  </mat-menu>

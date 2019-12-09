@@ -8,18 +8,19 @@ import { Language } from './model/language.model';
   styleUrls: ['./translate.component.scss']
 })
 export class TranslateComponent implements OnInit {
-  selectedLanguage = 'ja';
   languages: Language[] = [
     {name: 'English', value: 'en', flag: '../../../../assets/icon/en.png'},
     {name: '日本語', value: 'ja', flag: '../../../../assets/icon/ja.png'},
   ];
+  selectedLanguage: Language = this.languages[1];
   constructor(
     private translationService: TranslationService,
   ) { }
 
   ngOnInit() {
   }
-  switchLanguage(lang: string): void {
-    this.translationService.setCurrentLanguage(lang);
+  switchLanguage(lang: Language): void {
+    this.translationService.setCurrentLanguage(lang.value);
+    this.selectedLanguage = lang;
   }
 }

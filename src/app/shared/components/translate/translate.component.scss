@@ -1,7 +1,5 @@
-.select {
-    width: 5em;;
-}
-.content {
+.btn-content {
+    width: 98px;
     display: flex;
     align-items: center;
     img {
@@ -9,4 +7,7 @@
         height: 1.5em;
         margin-right: 10px;
     }
+}
+.main-translation-btn {
+    height: 63px;
 }

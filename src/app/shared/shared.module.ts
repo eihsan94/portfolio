@@ -21,6 +21,7 @@ import { CardItemDirective } from './components/grid-list/directive/card-item.di
 import { AnimatedPercentageBarComponent } from './components/animated-percentage-bar/animated-percentage-bar.component';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { CardContainerComponent } from './components/card-container/card-container.component';
+import { MatMenuModule } from '@angular/material/menu';
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
@@ -59,6 +60,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     RouterModule,
     HttpClientModule,
     MatProgressBarModule,
+    MatMenuModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
