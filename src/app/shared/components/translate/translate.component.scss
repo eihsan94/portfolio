@@ -2,12 +2,18 @@
     width: 98px;
     display: flex;
     align-items: center;
+
     img {
         width: 1.5em;
         height: 1.5em;
         margin-right: 10px;
     }
 }
+
 .main-translation-btn {
     height: 63px;
+    width: 8em;
+    padding-left: 5px;
+    padding-right: 0px;
+    font-size: 12px;
 }
