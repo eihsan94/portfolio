@@ -5,9 +5,7 @@
 <mat-card-content *cardItem="let card">
   <div class="row" *ngFor="let p of card.otherData">
     <div class="label">
-      <div class="name" translate>
-        {{p.name}} 
-      </div>
+      <div class="name" [translate]="p.name"></div>
       <div class="percentage">
           {{p.value}}%
       </div>
