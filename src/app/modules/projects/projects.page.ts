@@ -10,7 +10,7 @@ export class ProjectsPage implements OnInit {
     {name: 'Vegekko', description: 'VegekkoDescription', img: '../../../assets/image/vegekko.png', url: 'https://home.vegekko.com/'},
     {name: 'Portfolio', description: 'PortfolioDescription', img: '../../../assets/image/portfolio.png',
       url: 'https://master.d3phb5yfhxhh0o.amplifyapp.com/'},
-    {name: 'Active', description: 'ActiveDescription', img: '../../../assets/image/active.jpg',
+    {name: 'Active', description: 'ActiveDescription', img: '../../../assets/image/active.png',
       url: 'https://master.d96dqo2mwj537.amplifyapp.com/'},
   ];
   constructor() { }
