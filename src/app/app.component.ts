@@ -24,7 +24,7 @@ export class AppComponent {
   };
   darkModeButton: ButtonMetaData = {
     type: 'fab',
-    icon: this.darkMode ? 'nights_stay' : 'brightness_5',
+    icon: this.darkMode ? 'brightness_5' : 'nights_stay',
     color: 'accent',
     tooltip: this.darkMode ? 'wakeup' : 'zzzz',
     disabled: false,
@@ -33,7 +33,7 @@ export class AppComponent {
       this.themeService.toggleDarkTheme();
       this.darkModeButton = {
         ...this.darkModeButton,
-        icon: this.darkMode ? 'nights_stay' : 'brightness_5',
+        icon: this.darkMode ? 'brightness_5' : 'nights_stay',
         tooltip: this.darkMode ? 'wakeup' : 'zzzz',
       };
     },
