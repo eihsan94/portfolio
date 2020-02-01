@@ -1,4 +1,6 @@
 <app-sidenav [ngClass]="{'dark-theme': darkMode}" [menuList]="menuList">
   <app-buttons class="dark-mode-button" [buttonMetaData]="darkModeButton" (click)="darkModeButton.clickEvent($event)"></app-buttons>
-  <router-outlet></router-outlet> 
+  <div [@routeAnimations]="prepareRoute(outlet)" class="router-container" >
+    <router-outlet #outlet="outlet"></router-outlet>
+  </div>
 </app-sidenav>

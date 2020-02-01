@@ -9,12 +9,12 @@ import { ProjectsPage } from './modules/projects/projects.page';
 
 
 const routes: Routes = [
-  { path: '', component: ProfilePage, data: { state: '' } },
-  { path: 'work_experience', component: WorkExperiencePage, data: { state: 'work_experience' } },
-  { path: 'skills', component: SkillsPage, data: { state: 'skills' } },
-  { path: 'projects', component: ProjectsPage, data: { state: 'projects' } },
-  { path: 'education', component: EducationPage, data: { state: 'education' } },
-  { path: 'qualifications', component: QualificationsPage, data: { state: 'qualifications' } },
+  { path: '', component: ProfilePage, data: { animation: '' } },
+  { path: 'work_experience', component: WorkExperiencePage, data: { animation: 'work_experience' } },
+  { path: 'skills', component: SkillsPage, data: { animation: 'skills' } },
+  { path: 'projects', component: ProjectsPage, data: { animation: 'projects' } },
+  { path: 'education', component: EducationPage, data: { animation: 'education' } },
+  { path: 'qualifications', component: QualificationsPage, data: { animation: 'qualifications' } },
   { path: '**', redirectTo: '' },
 ];
 

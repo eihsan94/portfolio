@@ -18,7 +18,7 @@
 <!-- *cardItem="let card" === <ng-template cardItem let-item> -->
   <mat-card-content *cardItem="let card" class="card-content" [ngSwitch]="card.content">
     <app-hobby *ngSwitchCase="'hobbyContent'" class="hobby-content"></app-hobby>
-    <div *ngSwitchCase="'basicInfoContent'">
+    <div *ngSwitchCase="'basicInfoContent'" class="basic-info">
       <app-basic-info></app-basic-info>
     </div>
     <div *ngSwitchDefault class="self-intro-content-container">

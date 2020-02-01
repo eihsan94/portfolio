@@ -3,11 +3,15 @@ import { ButtonMetaData } from './shared/components/buttons/model/button';
 import { ThemeService } from './core/services/theme.service';
 import { MenuList } from './shared/components/sidenav/model/menu.model';
 import { TitleService } from './core/services/title.service';
-
+import { RouterOutlet } from '@angular/router';
+import { flyInOut } from './shared/animations/router-animation';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  animations: [
+    flyInOut
+  ],
 })
 export class AppComponent {
   darkMode: boolean;
@@ -46,5 +50,9 @@ export class AppComponent {
     this.themeService.isDarkTheme.subscribe(darkMode => {
       this.darkMode = darkMode;
     });
+  }
+
+  prepareRoute(outlet: RouterOutlet): RouterOutlet {
+    return outlet && outlet.activatedRouteData && outlet.activatedRouteData.animation;
   }
 }

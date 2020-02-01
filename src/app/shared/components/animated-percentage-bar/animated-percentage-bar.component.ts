@@ -17,7 +17,7 @@ export class AnimatedPercentageBarComponent implements OnInit, OnDestroy {
   ngOnInit() {
     setTimeout(() => {
       this.progressData.value = this.progressData.percentage;
-    }, 200);
+    }, 300);
     // this.subscription.add(this.source.subscribe(t => {
     //   if (t <= this.progressData.percentage) {
     //     this.progressData.value = t;
