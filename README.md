@@ -50,7 +50,7 @@ proxy.conf.js                corsの設定ファイル（今回のプロジェ�
 
 ## Features
 使用しているライブラリ
-- Angular 8.2.14
+- Angular 9
 - Angular Material 8.2.3
 
 ## Requirements?
