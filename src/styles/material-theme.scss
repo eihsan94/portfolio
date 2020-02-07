@@ -3,11 +3,19 @@
 
 @include mat-core();
 
+// SETTING THE MAIN COLOR
 $primary: mat-palette($mat-amber);
 $accent: mat-palette($mat-pink, A200, A100, A400);
 $warn: mat-palette($mat-red);
 $theme: mat-light-theme($primary, $accent, $warn);
 
+// SETTING BACGROUND COLOR
+$custom-background-color: #EEEE;
+$background: map-get($theme, background);
+$background: map_merge($background, (background: $custom-background-color));
+$theme: map_merge($theme, (background: $background));
+
+// SETTING MGL COLOR
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue.
