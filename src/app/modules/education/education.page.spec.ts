@@ -1,25 +1,26 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { EducationPage } from './education.page';
 
-import { SkillsComponent } from './skills.component';
 
-describe('SkillsComponent', () => {
-  let component: SkillsComponent;
-  let fixture: ComponentFixture<SkillsComponent>;
+
+describe('EducationPage', () => {
+  let page: EducationPage;
+  let fixture: ComponentFixture<EducationPage>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SkillsComponent ]
+      declarations: [ EducationPage ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SkillsComponent);
-    component = fixture.componentInstance;
+    fixture = TestBed.createComponent(EducationPage);
+    page = fixture.componentInstance;
     fixture.detectChanges();
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(page).toBeTruthy();
   });
 });

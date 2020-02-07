@@ -1,10 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ButtonsComponent } from './buttons.component';
+import { ButtonMetaData } from './model/button';
 
 describe('ButtonsComponent', () => {
   let component: ButtonsComponent;
   let fixture: ComponentFixture<ButtonsComponent>;
+  const buttonMetaData: ButtonMetaData = {
+    type: 'fab',
+    icon: 'add',
+    color: 'accent',
+    tooltip: '',
+    disabled: false,
+    matTooltipDisabled: false,
+    clickEvent: () => console.log(`${buttonMetaData.type} works`),
+  };
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -20,6 +30,7 @@ describe('ButtonsComponent', () => {
   });
 
   it('should create', () => {
+    component.buttonMetaData = buttonMetaData;
     expect(component).toBeTruthy();
   });
 });
