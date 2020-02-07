@@ -18,7 +18,7 @@ import { CardItemDirective } from './directive/card-item.directive';
   styleUrls: ['./grid-list.component.scss']
 })
 export class GridListComponent implements OnInit {
-  @ContentChild(CardItemDirective, {read: TemplateRef, static: false}) cardItemTemplate;
+  @ContentChild(CardItemDirective, {read: TemplateRef}) cardItemTemplate;
   @Input() mobileViewCards: CardGridSetting[];
   @Input() webViewCards: CardGridSetting[];
   /** Based on the screen size, switch from standard to one column per row */

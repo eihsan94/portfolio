@@ -1,10 +1,12 @@
+import { ThemePalette } from '@angular/material/core';
+
 export class Button {
 }
 
 export class ButtonMetaData {
     type: 'fab' | 'miniFab' | 'stroked' | 'flat' | 'raised' | 'icon' | 'basic';
     icon: string;
-    color: 'basic' | 'primary'| 'accent' | 'warn' | 'danger';
+    color: ThemePalette;
     tooltip: string;
     disabled: boolean;
     matTooltipDisabled: boolean;

@@ -1,7 +1,7 @@
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
     [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
-    <mat-toolbar translate="menuTitle">{{menuList.title}}</mat-toolbar>
+    <mat-toolbar translate="menuTitle"></mat-toolbar>
     <mat-nav-list *ngFor="let menu of menuList.menus">
       <a mat-list-item [routerLink]="[menu.path]" routerLinkActive="router-link-active" (click)="drawer.close()" *ngIf="(isHandset$ | async); else webMenu">
         <mat-icon matSuffix>{{menu.icon}}</mat-icon>　<span translate>{{menu.name}}</span>

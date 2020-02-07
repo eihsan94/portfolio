@@ -1,11 +1,12 @@
 import {
   Component, Input, HostBinding, ElementRef, EventEmitter, Output,
-  AfterViewInit, Renderer, ChangeDetectorRef, Inject, ViewEncapsulation
+  AfterViewInit, Renderer2, ChangeDetectorRef, Inject, ViewEncapsulation
 } from '@angular/core';
 import { AnimationBuilder, style, animate } from '@angular/animations';
 import { DOCUMENT } from '@angular/common';
 
 @Component({
+  // tslint:disable-next-line: component-selector
   selector: 'mgl-timeline-entry-dot',
   templateUrl: './timeline-entry-dot.component.html',
   styleUrls: ['./timeline-entry-dot.component.scss'],
@@ -13,15 +14,17 @@ import { DOCUMENT } from '@angular/common';
 })
 export class MglTimelineEntryDotComponent implements AfterViewInit {
 
-  private _expanded: boolean = false;
-  private _alternate: boolean = false;
-  private _mobile: boolean = false;
+  // tslint:disable: variable-name
+  private _expanded = false;
+  private _alternate = false;
+  private _mobile = false;
   private initialStyle;
-  private _size: number = 50;
+  private _size = 50;
   private animation;
 
   animationDone = new EventEmitter<any>();
 
+  // tslint:disable-next-line: no-input-rename
   @Input('class')
   @HostBinding('class')
   clazz = 'primary';
@@ -55,18 +58,18 @@ export class MglTimelineEntryDotComponent implements AfterViewInit {
   }
 
   set expanded(expanded: boolean) {
-    const animate = this._expanded !== expanded;
+    const animateConst = this._expanded !== expanded;
     this._expanded = expanded;
-    animate ? this.animate() : this.setStyle()
+    animateConst ? this.animate() : this.setStyle();
   }
 
   get expanded() {
     return this._expanded;
   }
 
-  constructor(private animationBuilder: AnimationBuilder, private elementRef: ElementRef, 
-  private renderer: Renderer, private changeDetectorRef: ChangeDetectorRef,
-  @Inject(DOCUMENT) private document) { }
+  constructor(private animationBuilder: AnimationBuilder, private elementRef: ElementRef,
+              private renderer: Renderer2, private changeDetectorRef: ChangeDetectorRef,
+              @Inject(DOCUMENT) private document) { }
 
   ngAfterViewInit() {
     this.initialStyle = this.document.defaultView.getComputedStyle(this.elementRef.nativeElement);
@@ -84,7 +87,7 @@ export class MglTimelineEntryDotComponent implements AfterViewInit {
       transform: 'translateY(-50%) translateX(-50%)',
       boxShadow: this.initialStyle && this.initialStyle.boxShadow,
       borderRadius: '100px'
-    }
+    };
   }
 
   private getTransitionStyle() {
@@ -93,7 +96,7 @@ export class MglTimelineEntryDotComponent implements AfterViewInit {
       left: '50%',
       opacity: 0.5,
       boxShadow: 'none'
-    }
+    };
   }
 
   private getExpandedStyle() {
@@ -105,7 +108,7 @@ export class MglTimelineEntryDotComponent implements AfterViewInit {
       height: '100%',
       opacity: 1,
       borderRadius: 0
-    }
+    };
   }
 
   private animate() {
@@ -117,19 +120,18 @@ export class MglTimelineEntryDotComponent implements AfterViewInit {
           animate('200ms ease', style(this.getTransitionStyle())),
           animate('200ms ease', style(this.getExpandedStyle())),
         ])
-        .create(this.elementRef.nativeElement)
+        .create(this.elementRef.nativeElement);
       this.animation.onDone(() => this.animationDone.emit({ toState: 'expanded' }));
       this.animation.play();
 
     } else {
-      this.animationBuilder
       this.animation = this.animationBuilder
         .build([
           style(this.getExpandedStyle()),
           animate('100ms ease', style(this.getTransitionStyle())),
           animate('100ms ease', style(this.getCollapsedStyle())),
         ])
-        .create(this.elementRef.nativeElement)
+        .create(this.elementRef.nativeElement);
       this.animation.onDone(() => this.animationDone.emit({ toState: 'collapsed' }));
       this.animation.play();
     }
@@ -139,8 +141,8 @@ export class MglTimelineEntryDotComponent implements AfterViewInit {
     this.destroyAnimation();
     const baseStyle = this.expanded ? this.getExpandedStyle() : this.getCollapsedStyle();
     Object.keys(baseStyle).forEach(property => {
-      this.renderer.setElementStyle(this.elementRef.nativeElement, property, baseStyle[property])
-    })
+      this.renderer.setStyle(this.elementRef.nativeElement, property, baseStyle[property]);
+    });
   }
 
   private destroyAnimation() {

@@ -1,8 +1,10 @@
 import { QueryList, ElementRef, ChangeDetectorRef, ViewEncapsulation } from '@angular/core';
 import { MglTimelineEntryComponent } from './../timeline-entry/timeline-entry.component';
 import { Component, Input, ContentChildren, AfterViewInit, EventEmitter, Output, HostListener, OnChanges, OnDestroy } from '@angular/core';
-import { Subscription } from 'rxjs/internal/Subscription';
+import { Subscription } from 'rxjs';
+
 @Component({
+  // tslint:disable-next-line: component-selector
   selector: 'mgl-timeline',
   templateUrl: './timeline.component.html',
   styleUrls: ['./timeline.component.scss'],
@@ -11,32 +13,37 @@ import { Subscription } from 'rxjs/internal/Subscription';
 export class MglTimelineComponent implements AfterViewInit, OnChanges, OnDestroy {
 
   @Input()
-  toggle: boolean = true;
+  toggle = true;
 
   @Input()
-  mobileWidthThreshold: number = 640;
+  mobileWidthThreshold = 640;
 
   @Input()
-  alternate: boolean = true;
+  alternate = true;
 
   @Input()
-  side: string = 'left';
+  side = 'left';
 
   set mobile(value: boolean) {
-    this.content && this.content.forEach(entry => entry.mobile = value);
-    this.elementRef.nativeElement.classList.toggle('mobile', value)
+    if (this.content) {
+      this.content.forEach(entry => entry.mobile = value);
+      this.elementRef.nativeElement.classList.toggle('mobile', value);
+    }
   }
 
   get mobile() {
     return this.elementRef.nativeElement.classList.contains('mobile');
   }
 
+  // tslint:disable-next-line: variable-name
   private _focusOnOpen = false;
 
   @Input()
   set focusOnOpen(focusOnOpen) {
-    this.content && this.content.forEach(entry => entry.focusOnOpen = focusOnOpen);
-    this._focusOnOpen = focusOnOpen;
+    if (this.content) {
+      this.content.forEach(entry => entry.focusOnOpen = focusOnOpen);
+      this._focusOnOpen = focusOnOpen;
+    }
   }
 
   get focusOnOpen() {

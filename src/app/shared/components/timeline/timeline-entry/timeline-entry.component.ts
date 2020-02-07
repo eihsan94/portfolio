@@ -10,6 +10,7 @@ import { MglTimelineEntryHeaderComponent } from '../timeline-entry-header/timeli
 import { Subscription } from 'rxjs/internal/Subscription';
 
 @Component({
+  // tslint:disable-next-line: component-selector
   selector: 'mgl-timeline-entry',
   templateUrl: './timeline-entry.component.html',
   styleUrls: ['./timeline-entry.component.scss'],
@@ -19,13 +20,13 @@ export class MglTimelineEntryComponent implements AfterViewInit, OnDestroy {
 
   private subscriptions: Subscription[] = [];
 
-  focusOnOpen: boolean = false;
+  focusOnOpen = false;
 
   set expanded(expanded) {
     if (this.dot && expanded) {
       this.dot.expanded = expanded;
     } else {
-      this.content.expanded = expanded
+      this.content.expanded = expanded;
     }
     this.changed.emit(expanded);
   }
@@ -35,7 +36,6 @@ export class MglTimelineEntryComponent implements AfterViewInit, OnDestroy {
     return this.dot ? (this.dot.expanded && this.content.expanded) : this.content.expanded;
   }
 
-  private _mobile: boolean = false;
 
   set mobile(value) {
     this.elementRef.nativeElement.classList.toggle('mobile', value);
@@ -47,16 +47,17 @@ export class MglTimelineEntryComponent implements AfterViewInit, OnDestroy {
     }
   }
 
+  // tslint:disable-next-line: no-output-rename
   @Output('expand')
   changed = new EventEmitter<boolean>();
 
   @Output()
   animationDone = new EventEmitter<string>();
 
-  @ContentChild(MglTimelineEntryContentComponent, {static: false}) content: MglTimelineEntryContentComponent;
-  @ContentChild(MglTimelineEntryHeaderComponent, {static: false}) header: MglTimelineEntryHeaderComponent;
-  @ContentChild(MglTimelineEntryDotComponent, {static: false}) dot: MglTimelineEntryDotComponent;
-  @ContentChild(MglTimelineEntrySideComponent, {static: false}) side: MglTimelineEntrySideComponent;
+  @ContentChild(MglTimelineEntryContentComponent) content: MglTimelineEntryContentComponent;
+  @ContentChild(MglTimelineEntryHeaderComponent) header: MglTimelineEntryHeaderComponent;
+  @ContentChild(MglTimelineEntryDotComponent) dot: MglTimelineEntryDotComponent;
+  @ContentChild(MglTimelineEntrySideComponent) side: MglTimelineEntrySideComponent;
 
   constructor(private elementRef: ElementRef) { }
 
