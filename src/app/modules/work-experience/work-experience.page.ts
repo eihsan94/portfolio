@@ -6,22 +6,29 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./work-experience.page.scss']
 })
 export class WorkExperiencePage implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
   title = 'app';
 
-  alternate: boolean = false;
-  toggle: boolean = false;
-  color: boolean = false;
-  size: number = 40;
-  side: string = 'left';
-  mobileWidthThreshold: number = 640;
+  alternate = false;
+  toggle = false;
+  color = false;
+  size = 40;
+  side = 'left';
+  mobileWidthThreshold = 640;
 
   entries = [
+    {
+      header: 'C3REVESE',
+      content: {
+        main: 'C3REVESEMainContent',
+        sub: [
+          'C3REVESESubContent1',
+          'C3REVESESubContent2',
+          'C3REVESESubContent3',
+          'C3REVESESubContent4',
+        ],
+      },
+      year: 'C3REVESEYear',
+    },
     {
       header: 'BirdworksSE',
       content: {
@@ -80,6 +87,12 @@ export class WorkExperiencePage implements OnInit {
       },
       year: 'TranslatorJamaicaYear',
     },
-  ]
+  ];
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
 }
 

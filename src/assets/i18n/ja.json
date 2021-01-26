@@ -25,8 +25,16 @@
     "programmingHobby": "プログラミング",
     "cookingHobby": "料理する",
 
+    "C3REVESE": "C3REVE株式会社 SE",
+    "C3REVESEYear":  "2020年4月 ~ 現在",
+    "C3REVESEMainContent": "システムエンジニアとして、私は以下を担当しました：",
+    "C3REVESESubContent1": "liff、Angular（フロントエンド）、nestjs（バックエンド）を使用してlineと統合するWebアプリ、「Mindweather」のシステム開発、",
+    "C3REVESESubContent2": "ionic＆angular（フロントエンド）、laravel（バックエンド）を使用して、家族や友人の間で子供の写真やストーリーを投稿するためのAndroidiosハイブリッドアプリであるStroyMの管理と開発",
+    "C3REVESESubContent3": "liff、ionic＆angular（フロントエンド）、nestjs（バックエンド）を使用したlimember、line公式アカウント管理サービスの管理と開発",
+    "C3REVESESubContent4": "liff、ionic＆react（フロントエンド）、nestjs（バックエンド）を活用したラインクーポン管理サービス「ミガキイチゴびこ」の開発",
+
     "BirdworksSE": "株式会社バードワークス SE",
-    "BirdworksSEYear": "2018年4月 ~ 現在",
+    "BirdworksSEYear": "2018年4月 ~ 2020年4月",
     "BirdworksSEMainContent": "システムエンジニアとして、私は以下を担当しました：",
     "BirdworksSESubContent1": "Angular（フロントエンド）、Rails（バックエンド）、Ionic（アンドロイド）を使用した会社在庫管理システムの開発",
     "BirdworksSESubContent2": "Angular（フロントエンド）、Express（バックエンド）を使用して会社のスライドショーWebアプリの開発",
@@ -68,6 +76,8 @@
     "VegekkoDescription": "Svelte Jsを使用して作成されたビーガンサイト",
     "PortfolioDescription": "Angular 9を使用して作成されたポートフォリオサイト",
     "ActiveDescription": "scssを使用して作成された活発なライフスタイルプログラムを提供するサイト",
+    "YuaiDescription": "渋谷にあるイスラム教学校。 Angular11で作られる",
+    "TYMDescription": "ハラル食事のECサイト。MERNで作られる",
 
     "qualificationsTitle": "取得した資格",
     "ToeicYear": "2015年12月",
