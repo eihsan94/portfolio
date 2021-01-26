@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { ButtonsComponent } from './buttons.component';
 import { ButtonMetaData } from './model/button';
@@ -16,7 +16,7 @@ describe('ButtonsComponent', () => {
     clickEvent: () => console.log(`${buttonMetaData.type} works`),
   };
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ ButtonsComponent ]
     })

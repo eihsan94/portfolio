@@ -14,7 +14,7 @@ import { flyInOut } from './shared/animations/router-animation';
   ],
 })
 export class AppComponent {
-  darkMode: boolean;
+  darkMode = false;
   menuList: MenuList = {
     title: `IHSAN'S CV`,
     menus: [
