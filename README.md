@@ -16,7 +16,7 @@
 ---
 
 ## What is this?
-Angular 9 で作られた自分についての自己紹介のウェブアプリです。 (This small Angular9 application is a self intro web app of me.)
+Angular 11 で作られた自分についての自己紹介のウェブアプリです。 (This small Angular9 application is a self intro web app of me.)
 
 ## Live Demo
 
@@ -50,7 +50,7 @@ proxy.conf.js                corsの設定ファイル（今回のプロジェ�
 
 ## Features
 使用しているライブラリ
-- Angular 9
+- Angular 11
 - Angular Material 8.2.3
 
 ## Requirements?
