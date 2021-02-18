@@ -1,5 +1,5 @@
 .grid-container {
-  margin: 20px;
+  margin: 2em;
 }
 
 .card {
@@ -8,4 +8,30 @@
   left: 15px;
   right: 15px;
   bottom: 15px;
+  mat-card-title {
+    font-size: 2em;
+    font-weight: bold;
+  }
+  
+  img {
+    position: absolute;
+    height: 6em;
+    width: 8em;
+    object-fit: cover;
+    object-position: top;
+    top: -2em;
+    right: 2em;
+    border-radius: 0.5em;
+  }
+  @media (max-width: 900px) {
+    mat-card-title {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+    img {
+      height: 5em;
+      width: 5em;
+      object-fit: cover;
+    }
+  }
 }

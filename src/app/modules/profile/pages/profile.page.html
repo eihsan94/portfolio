@@ -7,13 +7,11 @@
     </div>
     <div class="position" translate="position"></div>
   </div>
-
 </div>
 <app-grid-list 
 [mobileViewCards]="mobileViewCards"
 [webViewCards]="webViewCards"
 >
-<!-- *cardItem="let card" === <ng-template cardItem let-item> -->
   <mat-card-content *cardItem="let card" class="card-content" [ngSwitch]="card.content">
     <app-hobby *ngSwitchCase="'hobbyContent'" class="hobby-content"></app-hobby>
     <div *ngSwitchCase="'basicInfoContent'" class="basic-info">

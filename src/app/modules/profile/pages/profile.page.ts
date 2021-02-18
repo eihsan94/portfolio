@@ -12,21 +12,59 @@ export class ProfilePage {
     {
       title: 'selfIntroTitle',
       content: 'selfIntroContent',
+      img: '../../../../assets/image/hello.jpg',
       cols: 2,
       rows: 1,
+      style: {
+        background: '#FD9A14',
+        color: 'white',
+      },
     },
-    { title: 'basicInfoTitle', content: 'basicInfoContent', cols: 2, rows: 1 },
-    { title: 'hobbyTitle', content: 'hobbyContent', cols: 2, rows: 1 },
+    {
+      title: 'basicInfoTitle', content: 'basicInfoContent', cols: 2, rows: 1,
+      img: '../../../../assets/image/contact.jpg',
+      style: {
+        background: '#5AB25E',
+        color: 'white',
+      }
+    },
+    {
+      title: 'hobbyTitle', content: 'hobbyContent', cols: 2, rows: 1,
+      img: '../../../../assets/image/hobbies.jpg',
+      style: {
+        background: '#424242',
+        color: 'white',
+      },
+    },
   ];
   webViewCards: CardGridSetting[] = [
     {
       title: 'selfIntroTitle',
       content: 'selfIntroContent',
+      img: '../../../../assets/image/hello.jpg',
       cols: 2,
       rows: 1,
+      style: {
+        background: '#5AB25E',
+        color: 'white',
+      }
     },
-    { title: 'basicInfoTitle', content: 'basicInfoContent', cols: 1, rows: 1 },
-    { title: 'hobbyTitle', content: 'hobbyContent', cols: 1, rows: 1 },
+    {
+      title: 'basicInfoTitle', content: 'basicInfoContent', cols: 1, rows: 1,
+      img: '../../../../assets/image/contact.jpg',
+      style: {
+        background: '#FD9A14',
+        color: 'white',
+      }
+    },
+    {
+      title: 'hobbyTitle', content: 'hobbyContent', cols: 1, rows: 1,
+      img: '../../../../assets/image/hobbies.jpg',
+      style: {
+        background: '#424242',
+        color: 'white',
+      },
+    },
   ];
 
   constructor() {}
