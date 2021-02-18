@@ -65,6 +65,11 @@ a {
   padding-top: 2em;
   padding-bottom: 2em;
 }
+@media (max-width: 900px) {
+.title-container {
+  font-size: 2em;
+}
+}
 .translate-button {
   position: fixed;
   right: 6em;
@@ -74,6 +79,10 @@ a {
   color: white;
   transition: all 0.5s cubic-bezier(.25,.8,.25,1);
   z-index: 1;
+  @media (max-width: 900px) {
+    left: 1.5em;
+    width: fit-content;
+  }
 }
 .title-icon {
   margin-left: 10px;

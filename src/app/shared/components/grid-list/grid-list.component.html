@@ -1,5 +1,5 @@
 <div class="grid-container">
-    <mat-grid-list cols="2" rowHeight="350px" gutterSize="25px">
+    <mat-grid-list cols="2" rowHeight="350px" gutterSize="50px" >
       <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
         <mat-card class="card" [ngStyle]="card.style">
             <mat-card-title>
