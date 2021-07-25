@@ -17,6 +17,19 @@ export class WorkExperiencePage implements OnInit {
 
   entries = [
     {
+      header: 'SRGSE',
+      content: {
+        main: 'SRGSEMainContent',
+        sub: [
+          'SRGSESubContent1',
+          'SRGSESubContent2',
+          'SRGSESubContent3',
+          'SRGSESubContent4',
+        ],
+      },
+      year: 'SRGSEYear',
+    },
+    {
       header: 'C3REVESE',
       content: {
         main: 'C3REVESEMainContent',

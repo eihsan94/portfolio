@@ -24,8 +24,17 @@
     "readingHobby": "Reading",
     "programmingHobby": "Programming",
     "cookingHobby": "Cooking",
+
+    "SRGSE": "Seven Rich Group SE",
+    "SRGSEYear": "April, 2021 - Now",
+    "SRGSEMainContent": "As a senior engineer I was in charge in:",
+    "SRGSESubContent1": "Developing Beyond Magazine a web media that integrates with wordpress using NextJS (frontend), serverless (backend), wordpress CMS",
+    "SRGSESubContent2": "Think of a system that can further activate the startup business",
+    "SRGSESubContent3": "As a CTO apprentice, I was entrusted with an EC startup Project that provides service for working moms",
+    "SRGSESubContent4": "Think of a new SAAS business",
+
     "C3REVESE": "C3REVE.Inc SE",
-    "C3REVESEYear": "April, 2020 - Now",
+    "C3REVESEYear": "April, 2020 - March, 2021",
     "C3REVESEMainContent": "As a system engineer I was in charge in:",
     "C3REVESESubContent1": "Developing Mindweather a web app that integrates with line using liff, Angular (frontend), nestjs (backend)",
     "C3REVESESubContent2": "Managing and developing StroyM, an android ios hybrid app for posting child photos and stories among family and friends  using ionic angular (frontend), laravel (backend),",

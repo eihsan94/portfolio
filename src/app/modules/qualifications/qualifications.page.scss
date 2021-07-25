@@ -1,8 +1,10 @@
+@use 'sass:math';
+
 @function calc-height($value1) {
-    @return $value1 / 3;
+    @return math.div($value1, 3);
 }
 @function calc-card-height($value1) {
-    @return $value1 / 1.7;
+    @return math.div($value1, 1.7);
 }
 $image-width: 100%;
 $image-height: calc-height($image-width);

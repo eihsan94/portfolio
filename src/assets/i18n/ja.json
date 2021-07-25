@@ -25,8 +25,16 @@
     "programmingHobby": "プログラミング",
     "cookingHobby": "料理する",
 
+    "SRGSE": "SRG株式会社 SE",
+    "SRGSEYear":  "2021年4月 ~ 現在",
+    "SRGSEMainContent": "シニアエンジニアとして、私は以下を担当しました：",
+    "SRGSESubContent1": "Next JS（フロントエンド）、wp (cms), serverless（バックエンド）を使用してウェブメディアの開発をやっています、",
+    "SRGSESubContent2": "スタートアップの事業をより活性化できるシステムを考えます",
+    "SRGSESubContent3": "CTO見習いとして、ママ休食のプロジェクトに任されました",
+    "SRGSESubContent4": "新しいSAASの事業を考えます",
+
     "C3REVESE": "C3REVE株式会社 SE",
-    "C3REVESEYear":  "2020年4月 ~ 現在",
+    "C3REVESEYear":  "2020年4月 ~ 2021年3月",
     "C3REVESEMainContent": "システムエンジニアとして、私は以下を担当しました：",
     "C3REVESESubContent1": "liff、Angular（フロントエンド）、nestjs（バックエンド）を使用してlineと統合するWebアプリ、「Mindweather」のシステム開発、",
     "C3REVESESubContent2": "ionic＆angular（フロントエンド）、laravel（バックエンド）を使用して、家族や友人の間で子供の写真やストーリーを投稿するためのAndroidiosハイブリッドアプリであるStroyMの管理と開発",
