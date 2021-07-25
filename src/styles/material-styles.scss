@@ -1,5 +1,5 @@
-@import '~@angular/material/theming';
-@include mat-core();
+@use '~@angular/material' as mat;
+@include mat.core();
 
 @mixin style-theme($theme) {
   $p: map-get($theme, primary);
@@ -7,16 +7,16 @@
   $w: map-get($theme, warn);
   $b: map-get($theme, background);
   $f: map-get($theme, foreground);
-  $primary: mat-color($p);
-  $accent: mat-color($a);
-  $warn: mat-color($w);
-  $background: mat-color($b, background);
-  $background-card: mat-color($b, card);
-  $foreground: mat-color($f, text);
-  $app-bar: mat-color($b, app-bar);
-  $primary-contrast: mat-color($p, default-contrast);
-  $accent-contrast: mat-color($a, default-contrast);
-  $warn-contrast: mat-color($w, default-contrast);
+  $primary: mat.get-color-from-palette($p);
+  $accent: mat.get-color-from-palette($a);
+  $warn: mat.get-color-from-palette($w);
+  $background: mat.get-color-from-palette($b, background);
+  $background-card: mat.get-color-from-palette($b, card);
+  $foreground: mat.get-color-from-palette($f, text);
+  $app-bar: mat.get-color-from-palette($b, app-bar);
+  $primary-contrast: mat.get-color-from-palette($p, default-contrast);
+  $accent-contrast: mat.get-color-from-palette($a, default-contrast);
+  $warn-contrast: mat.get-color-from-palette($w, default-contrast);
 
   .color.primary {
     color: $primary;
@@ -148,14 +148,14 @@
 // }
 
 // .static-elevation {
-//   @include mat-elevation(2);
+//   @include mat.elevation(2);
 // }
 
 // .elevated {
-//   @include mat-elevation-transition;
-//   @include mat-elevation(2);
+//   @include mat.elevation-transition;
+//   @include mat.elevation(2);
 
 //   &:hover {
-//     @include mat-elevation(6);
+//     @include mat.elevation(6);
 //   }
 }

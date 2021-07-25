@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@use '~@angular/material' as mat;
 @import './styles/material-theme';
 // @import './styles/material-styles';
 // @import "./styles/material-snacker";
@@ -7,137 +8,137 @@ html, body { height: 100%; }
 body { margin: 0; font-family: 'Montserrat', sans-serif; color: gray;}
 
 
-// $light-blue: mat-palette($mat-light-blue, A400);
-// $red: mat-palette($mat-red);
-// $deep-orange: mat-palette($mat-deep-orange, A200);
-// $pink: mat-palette($mat-red, A100);
-// $crimson: mat-palette($mat-red, A400);
+// $light-blue: mat.define-palette(mat.$light-blue-palette, A400);
+// $red: mat.define-palette(mat.$red-palette);
+// $deep-orange: mat.define-palette(mat.$deep-orange-palette, A200);
+// $pink: mat.define-palette(mat.$red-palette, A100);
+// $crimson: mat.define-palette(mat.$red-palette, A400);
 
 // /*-- Dark Theme Colors --*/
-// $green-dark: mat-palette($mat-green, A400);
-// $indigo-dark: mat-palette($mat-indigo, A200);
-// $purple-dark: mat-palette($mat-purple, A700);
-// $amber-dark: mat-palette($mat-amber, A400);
-// $teal-dark: mat-palette($mat-teal, A400);
+// $green-dark: mat.define-palette(mat.$green-palette, A400);
+// $indigo-dark: mat.define-palette(mat.$indigo-palette, A200);
+// $purple-dark: mat.define-palette(mat.$purple-palette, A700);
+// $amber-dark: mat.define-palette(mat.$amber-palette, A400);
+// $teal-dark: mat.define-palette(mat.$teal-palette, A400);
 
 // /*-- Light Theme Colors --*/
-// $green-light: mat-palette($mat-green, A700);
-// $indigo-light: mat-palette($mat-indigo, A400);
-// $purple-light: mat-palette($mat-purple, 700);
-// $amber-light: mat-palette($mat-amber, A700);
-// $teal-light: mat-palette($mat-teal, A700);
+// $green-light: mat.define-palette(mat.$green-palette, A700);
+// $indigo-light: mat.define-palette(mat.$indigo-palette, A400);
+// $purple-light: mat.define-palette(mat.$purple-palette, 700);
+// $amber-light: mat.define-palette(mat.$amber-palette, A700);
+// $teal-light: mat.define-palette(mat.$teal-palette, A700);
 
 // /*-- Default Theme --*/
-// $default-theme: mat-light-theme($teal-light, $crimson);
+// $default-theme: mat.define-light-theme($teal-light, $crimson);
 // @include style-theme($default-theme);
-// @include angular-material-theme($default-theme);
+// @include mat.all-component-themes($default-theme);
 
 // /*-- Dark Themes --*/
 // .dark-green {
-//   $default-theme: mat-dark-theme($green-dark, $light-blue);
+//   $default-theme: mat.define-dark-theme($green-dark, $light-blue);
 //   @include style-theme($default-theme);
-//   @include angular-material-theme($default-theme);
+//   @include mat.all-component-themes($default-theme);
 // }
 
 // .dark-blue {
-//   $default-theme: mat-dark-theme($light-blue, $green-dark);
+//   $default-theme: mat.define-dark-theme($light-blue, $green-dark);
 //   @include style-theme($default-theme);
-//   @include angular-material-theme($default-theme);
+//   @include mat.all-component-themes($default-theme);
 // }
 
 // .dark-red {
-//   $default-theme: mat-dark-theme($red, $light-blue, $pink);
+//   $default-theme: mat.define-dark-theme($red, $light-blue, $pink);
 //   @include style-theme($default-theme);
-//   @include angular-material-theme($default-theme);
+//   @include mat.all-component-themes($default-theme);
 // }
 
 // .dark-indigo {
-//   $default-theme: mat-dark-theme($indigo-dark, $deep-orange);
+//   $default-theme: mat.define-dark-theme($indigo-dark, $deep-orange);
 //   @include style-theme($default-theme);
-//   @include angular-material-theme($default-theme);
+//   @include mat.all-component-themes($default-theme);
 // }
 
 // .dark-orange {
-//   $default-theme: mat-dark-theme($deep-orange, $indigo-dark);
+//   $default-theme: mat.define-dark-theme($deep-orange, $indigo-dark);
 //   @include style-theme($default-theme);
-//   @include angular-material-theme($default-theme);
+//   @include mat.all-component-themes($default-theme);
 // }
 
 // .dark-purple {
-//   $default-theme: mat-dark-theme($purple-dark, $amber-dark);
+//   $default-theme: mat.define-dark-theme($purple-dark, $amber-dark);
 //   @include style-theme($default-theme);
-//   @include angular-material-theme($default-theme);
+//   @include mat.all-component-themes($default-theme);
 // }
 
 // .dark-amber {
-//   $default-theme: mat-dark-theme($amber-dark, $purple-dark);
+//   $default-theme: mat.define-dark-theme($amber-dark, $purple-dark);
 //   @include style-theme($default-theme);
-//   @include angular-material-theme($default-theme);
+//   @include mat.all-component-themes($default-theme);
 // }
 
 // .dark-crimson {
-//   $default-theme: mat-dark-theme($crimson, $teal-dark, $deep-orange);
+//   $default-theme: mat.define-dark-theme($crimson, $teal-dark, $deep-orange);
 //   @include style-theme($default-theme);
-//   @include angular-material-theme($default-theme);
+//   @include mat.all-component-themes($default-theme);
 // }
 
 // .dark-teal {
-//   $default-theme: mat-dark-theme($teal-dark, $crimson, $deep-orange);
+//   $default-theme: mat.define-dark-theme($teal-dark, $crimson, $deep-orange);
 //   @include style-theme($default-theme);
-//   @include angular-material-theme($default-theme);
+//   @include mat.all-component-themes($default-theme);
 // }
 
 // /*-- Light Themes --*/
 // .light-green {
-//   $default-theme: mat-light-theme($green-light, $light-blue);
+//   $default-theme: mat.define-light-theme($green-light, $light-blue);
 //   @include style-theme($default-theme);
-//   @include angular-material-theme($default-theme);
+//   @include mat.all-component-themes($default-theme);
 // }
 
 // .light-blue {
-//   $default-theme: mat-light-theme($light-blue, $green-light);
+//   $default-theme: mat.define-light-theme($light-blue, $green-light);
 //   @include style-theme($default-theme);
-//   @include angular-material-theme($default-theme);
+//   @include mat.all-component-themes($default-theme);
 // }
 
 // .light-red {
-//   $default-theme: mat-light-theme($red, $light-blue, $pink);
+//   $default-theme: mat.define-light-theme($red, $light-blue, $pink);
 //   @include style-theme($default-theme);
-//   @include angular-material-theme($default-theme);
+//   @include mat.all-component-themes($default-theme);
 // }
 
 // .light-indigo {
-//   $default-theme: mat-light-theme($indigo-light, $deep-orange);
+//   $default-theme: mat.define-light-theme($indigo-light, $deep-orange);
 //   @include style-theme($default-theme);
-//   @include angular-material-theme($default-theme);
+//   @include mat.all-component-themes($default-theme);
 // }
 
 // .light-orange {
-//   $default-theme: mat-light-theme($deep-orange, $indigo-light);
+//   $default-theme: mat.define-light-theme($deep-orange, $indigo-light);
 //   @include style-theme($default-theme);
-//   @include angular-material-theme($default-theme);
+//   @include mat.all-component-themes($default-theme);
 // }
 
 // .light-purple {
-//   $default-theme: mat-light-theme($purple-light, $amber-light);
+//   $default-theme: mat.define-light-theme($purple-light, $amber-light);
 //   @include style-theme($default-theme);
-//   @include angular-material-theme($default-theme);
+//   @include mat.all-component-themes($default-theme);
 // }
 
 // .light-amber {
-//   $default-theme: mat-light-theme($amber-light, $purple-light);
+//   $default-theme: mat.define-light-theme($amber-light, $purple-light);
 //   @include style-theme($default-theme);
-//   @include angular-material-theme($default-theme);
+//   @include mat.all-component-themes($default-theme);
 // }
 
 // .light-crimson {
-//   $default-theme: mat-light-theme($crimson, $teal-light, $deep-orange);
+//   $default-theme: mat.define-light-theme($crimson, $teal-light, $deep-orange);
 //   @include style-theme($default-theme);
-//   @include angular-material-theme($default-theme);
+//   @include mat.all-component-themes($default-theme);
 // }
 
 // .light-teal {
-//   $default-theme: mat-light-theme($teal-light, $crimson, $deep-orange);
+//   $default-theme: mat.define-light-theme($teal-light, $crimson, $deep-orange);
 //   @include style-theme($default-theme);
-//   @include angular-material-theme($default-theme);
+//   @include mat.all-component-themes($default-theme);
 // }
