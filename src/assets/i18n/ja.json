@@ -30,7 +30,7 @@
     "SRGSEMainContent": "シニアエンジニアとして、私は以下を担当しました：",
     "SRGSESubContent1": "Next JS（フロントエンド）、wp (cms), serverless（バックエンド）を使用してウェブメディアの開発をやっています、",
     "SRGSESubContent2": "スタートアップの事業をより活性化できるシステムを考えます",
-    "SRGSESubContent3": "CTO見習いとして、ママ休食のプロジェクトに任されました",
+    "SRGSESubContent3": "CTOとして、ママ休食のプロジェクトに任されました",
     "SRGSESubContent4": "新しいSAASの事業を考えます",
 
     "C3REVESE": "C3REVE株式会社 SE",
@@ -91,6 +91,9 @@
     "IECDescription": "Ionic＆Angular11を使用したシンプルなモバイルデバイスECサイトのコンセプト",
     "GBDescription": "Gatsbyjsを使って自分のために作ったシンプルなブログ",
     "BFUNDescription": "VANILLA JS、CSS、HTMLで作ったMEETUPのようなプラットフォームコンセプト",
+    "BeyondDescription": "Beyond Magazineはモノ選び、趣味や毎日の遊びのセンスをアップすることに特化したライフスタイルメディア。各界の一流記者や専門家、インフルエンサー、経営者たちが、ググっても出てこない一歩先行く未来の情報や、一流の審美眼を持っている目利きたちならではの視点や意見の描かれた記事を、日々読める量だけ公開し続けます。毎日継続して読み続けてくれることで、必ずや今日の自分のセンスを越えたいと思っている読者の一助になれたら請け合いです。",
+    "MamakyuDescription": "ママキュウは、仕事量を減らして日本の家族の健康を増進することに焦点を当てたecサイトです。 だから私たちがしていることは、あなたとあなたの家族が必要な完全な栄養素を確実に受け取れるように、専門の栄養士によって仕出し料理されているお弁当箱を提供することです。",
+
 
     "qualificationsTitle": "取得した資格",
     "ToeicYear": "2015年12月",

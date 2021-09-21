@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectsPage implements OnInit {
   projects = [
+    {name: 'Mamakyu', description: 'MamakyuDescription', img: '../../../assets/image/mamakyu.png',
+      url: 'https://fzd2nan6ag4lht5m-57448857790.shopifypreview.com/'},
+    {name: 'Beyond', description: 'BeyondDescription', img: '../../../assets/image/beyondmag.png',
+      url: 'https://beyondmag.jp/'},
     {name: 'BFUN', description: 'BFUNDescription', img: '../../../assets/image/bfun.png',
       url: 'https://b-fun.netlify.app/'},
     {name: 'Team Yaa Mall', description: 'TYMDescription', img: '../../../assets/image/tym.png',
