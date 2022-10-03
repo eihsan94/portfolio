@@ -1,6 +1,7 @@
 # Portfolio
 
 ## 目次　(Table of Contents)
+
 - [Portfolio](#portfolio)
   - [目次　(Table of Contents)](#%e7%9b%ae%e6%ac%a1-table-of-contents)
   - [What is this?](#what-is-this)
@@ -16,14 +17,17 @@
 ---
 
 ## What is this?
+
 Angular 11 で作られた自分についての自己紹介のウェブアプリです。 (This small Angular9 application is a self intro web app of me.)
 
 ## Live Demo
 
-Live Demoは[こちらから](https://master.d3phb5yfhxhh0o.amplifyapp.com/)
+Live Demo は[こちらから](https://portfolio-psi-rust.vercel.app/)
 
 ## Project Structure
+
 ソースの構成は以下となります：
+
 <pre>
 dist/                        コンパイルされた静的ファイル　compiled static file
 docs/                        プロジェクト説明とコーディング方法ベストプラクティスなど project docs, coding guides and best practice（開発中）
@@ -49,38 +53,51 @@ proxy.conf.js                corsの設定ファイル（今回のプロジェ�
 </pre>
 
 ## Features
+
 使用しているライブラリ
+
 - Angular 11
 - Angular Material 8.2.3
 
 ## Requirements?
+
 - Node v10.16.3 ~
 
 ## Installation
+
 パッケージインストール
+
 ```SH
 $ npm install
 ```
 
 ## Run Application and start development Server
+
 アプリ実行コマンド
+
 ```SH
 $ npm start
 ```
-起動したら``http://localhost:4200/``をブラウザーで開く
+
+起動したら`http://localhost:4200/`をブラウザーで開く
 
 ## Run Tests
- - ツール
-   -  [jasmin](https://jasmine.github.io)
-   -   [karma](https://karma-runner.github.io) 設定ファイル `karma.conf.js`.
+
+- ツール
+  - [jasmin](https://jasmine.github.io)
+  - [karma](https://karma-runner.github.io) 設定ファイル `karma.conf.js`.
 - テストの実行コマンド：
+
 ```SH
 $ npm test
 ```
+
 ## Build Application for Deployment
- デプロイビルド実行コマンド：
+
+デプロイビルド実行コマンド：
+
 ```SH
 $ npm run build
 ```
-デプロイビルド完了したら`dist/portfolio/`にコンパイルされたJS、CSSとHTMlファイルが格納される
 
+デプロイビルド完了したら`dist/portfolio/`にコンパイルされた JS、CSS と HTMl ファイルが格納される
